@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
 
+/* Váriaveis no css */
+
+:root{
+    /* Aqui dentro do root é onde eu declaro minhas váriaveis */
+    /* Aqui dentro estou declarando váriaveis paras as cores que mais utilizo no meu projeto */
+    --cor--primaria: #000;
+    --cor-secundaria: #fff;
+    --cor--terciaria: #22d4fd;
+}
+
+
 *{
     margin: 0;
     padding: 0;
@@ -8,7 +19,7 @@
 body{
     /* height: 100vh; */
     box-sizing: border-box;
-    background-color: #000;
+    background-color: var(--cor--primaria);
     color: #f6f6f6;
 }
 
@@ -25,13 +36,13 @@ header{
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 24px;
-    color: #22D4FD;
+    color: var(--cor--terciaria);
     text-decoration: none;
 }
 
 
 #span-h1{
-    color: #22D4FD;
+    color: var(--cor--terciaria);
 }
 
 #container{
@@ -75,7 +86,7 @@ header{
 
 .botoes{
     /* background-color: #22D4FD; */
-    border: solid 2px #22D4FD;
+    border: solid 2px var(--cor--terciaria);
     display: flex;
     justify-content: center;
     gap: 16px;
@@ -86,7 +97,7 @@ header{
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     text-decoration: none;
-    color: #fff;
+    color: var(--cor-secundaria);
     font-size: 24px;
 }
 
@@ -100,7 +111,7 @@ header{
 }
 
 footer{
-    background-color: #22D4FD;
+    background-color: var(--cor--terciaria);
     height: 80px;
     display: flex;
     justify-content: center;
@@ -109,7 +120,7 @@ footer{
 footer p{
     font-family: 'Montserrat', sans-serif;;
     font-weight: 400;
-    color: #000;
+    color: var(--cor--primaria);
     font-size: 24px;
 }
 
