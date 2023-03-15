@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
 
-/* Váriaveis no css */
-
 :root{
-    /* Aqui dentro do root é onde eu declaro minhas váriaveis */
-    /* Aqui dentro estou declarando váriaveis paras as cores que mais utilizo no meu projeto */
     --cor--primaria: #000;
     --cor-secundaria: #fff;
     --cor--terciaria: #22d4fd;
