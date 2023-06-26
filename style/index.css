@@ -19,10 +19,6 @@ body{
         background-color: #2E7BA2;
     }
     
-    #barra-navegacao img{
-        width: 170px;
-    }
-    
     #barra-navegacao ul{
         list-style: none;
         display: flex;
@@ -37,10 +33,6 @@ body{
         font-weight: 700;
         line-height: 40px;
         color: #fff;
-    }
-    
-    #banner img{
-        width: 1440px;
     }
     #banner h1{
         position: absolute;
@@ -100,9 +92,6 @@ body{
         color: #fff;
     }
 
-    #ft-evento{
-        width: 609px;
-    }
 
     #line-up{
         font-size: 64px;
@@ -135,6 +124,7 @@ body{
         justify-content: center;
     }
 
+    
     .bandas h2{
         font-size: 48px;
         font-family: 'Raleway', sans-serif;
