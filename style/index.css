@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-image: linear-gradient(180deg, #BFDAE6 0%, #FCF0DD 50%, #FACF9D 100%);
+}
+
+#barra-navegacao{
+    display: flex;
+    background-color: #2E7BA2;
+    justify-content: space-between;
+    padding: 10px 0 10px 8px;
+    align-items: center;
+}
+
+#barra-navegacao img{
+    width: 170px;
+}
+
+#barra-navegacao ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+#barra-navegacao ul a{
+    padding: 0 12px 0 12px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: Raleway;
+    font-weight: 700;
+    line-height: 40px;
+    color: #fff;
+}
+
+#banner img{
+    width: 1263px;
+}
+#banner h1{
+    position: absolute;
+    text-align: center;
+    font-size: 42px;
+    font-family: Calistoga;
+    color: #444444;
+    left: 37%;
+    top: 35%;
+}
