@@ -10,12 +10,14 @@ body{
 }
 
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1279px) and (max-width: 1441px){
+    header{
+        margin-bottom: 190px;
+    }
     #barra-navegacao{
         display: flex;
-        padding: 32px 120px;
+        padding: 30px 120px;
         justify-content: space-between;
-        align-items: center;
         background-color: #2E7BA2;
     }
     
@@ -35,13 +37,17 @@ body{
         color: #fff;
     }
     #banner h1{
-        position: absolute;
+        position: relative;
         text-align: center;
         font-size: 64px;
         font-family: 'Calistoga', cursive;
         color: #444444;
-        left: 35%;
-        top: 25%;
+        padding-top: 80px;
+    }
+
+    #banner img{
+        position: absolute;
+        width: 100%;
     }
 
     .secoes{
@@ -88,8 +94,13 @@ body{
         gap: 16px;
         border-radius: 16px;
         background-color: #2E7BA2;
-        box-shadow: 4px 4px 0 0 #444444;
         color: #fff;
+        cursor: pointer;
+    }
+
+    #info-experiencia button:hover{
+        transition: 0.4s;
+        box-shadow: 4px 4px 0 0 #444444;
     }
 
 
@@ -121,82 +132,55 @@ body{
 
     .bandas{
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
     }
 
-    
-    .bandas h2{
-        font-size: 48px;
-        font-family: 'Raleway', sans-serif;
-        font-weight: 800;
-        color: #444444;
-        margin: 48px 0 16px 0;
-    }
-
-    .bandas h5{
-        font-size: 40px;
-        font-family: 'Raleway', sans-serif;
-        font-weight: 700;
-        color: #444444;
-        margin: 16px 0;
-        padding: 0 16px;
-    }
-
-    .bandas h6{
-        font-size: 32px;
-        font-family: 'Raleway', sans-serif;
-        font-weight: 700;
-        color: #444444;
-        margin: 16px 0;
-        padding: 0 16px;
-    }
-
-    .bandas h4{
-        font-size: 32px;
-        font-family: 'Raleway', sans-serif;
-        font-weight: 500;
-        color: #444444;
-        font-style: normal;
-        margin: 16px 0;
-        padding: 0 16px;
-    }
-
-    .bandas2{
+    .banda{
         display: flex;
-        justify-content: center;
+        align-items: center;
     }
-    .bandas2 h2{
+    
+    .banda h2{
         font-size: 48px;
         font-family: 'Raleway', sans-serif;
         font-weight: 800;
+        font-style: normal;
         color: #444444;
+        line-height: normal;
         margin: 48px 0 16px 0;
     }
 
-    .bandas2 h5{
+    .banda h5{
         font-size: 40px;
         font-family: 'Raleway', sans-serif;
         font-weight: 700;
+        font-style: normal;
         color: #444444;
-        margin: 16px 0;
+        line-height: normal;
+        margin: 14px 0;
         padding: 0 12px;
     }
 
-    .bandas2 h6{
+    .banda h6{
         font-size: 32px;
         font-family: 'Raleway', sans-serif;
         font-weight: 700;
+        font-style: normal;
         color: #444444;
+        line-height: normal;
         margin: 16px 0;
         padding: 0 16px;
     }
 
-    .bandas2 h4{
+    .banda h4{
         font-size: 32px;
         font-family: 'Raleway', sans-serif;
         font-weight: 500;
+        font-style: normal;
         color: #444444;
         font-style: normal;
+        line-height: normal;
         margin: 16px 0;
         padding: 0 16px;
     }
