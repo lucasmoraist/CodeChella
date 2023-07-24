@@ -16,6 +16,7 @@
 
 @media screen and (min-width: 1441px) and (max-width: 2000px){
     #banner {
+        background: url(../assets/Tema-Verão/Imagens/3-Banner-Mapa-de-setores.png), lightgray 50% / cover no-repeat;
         background-size: cover;
     }
     .mapa{
@@ -28,7 +29,9 @@
 }
 
 @media screen and (min-width: 1279px) and (max-width: 1441px){
-    
+    #banner {
+        background: url(../assets/Tema-Verão/Imagens/3-Banner-Mapa-de-setores.png), lightgray 50% / cover no-repeat;
+    }
     .mapa{
         padding: 32px 120px;
     }
@@ -43,10 +46,6 @@
         background-size: cover;
     }
         
-}
-
-#banner {
-    background: url(../assets/Tema-Verão/Imagens/3-Banner-Mapa-de-setores.png), lightgray 50% / cover no-repeat;
 }
 
 .mapa{
@@ -116,4 +115,59 @@
 }
 .cor5{
     background-color: #0E7DF1;
+}
+
+.detalhes{
+    display: flex;
+    padding: 48px 120px;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    align-self: stretch;
+}
+
+.detalhes h5{
+    color: var(--cor-escura);
+    text-align: center;
+    font-family: var(--raleway-font);
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.setores{
+    display: flex;
+    gap: 24px;
+}
+
+.meio{
+    margin-top: 120px;
+}
+
+.colunas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    flex: 1 0 0;
+}
+
+.colunas h6{
+    color: var(--cor-escura);
+    text-align: center;
+    font-family: var(--raleway-font);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.colunas p{
+    color: var(--cor-escura);
+    text-align: center;
+    font-family: var(--raleway-font);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    align-self: stretch;
+    line-height: 40px; 
 }
