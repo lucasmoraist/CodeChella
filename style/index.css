@@ -34,20 +34,9 @@
         background-size: cover;
     }
 
-    #info-experiencia p {
-        margin: 0 150px;
-    }
-
-    .data-festa {
-        justify-content: center;
-    }
-
-    .linha {
-        width: 600px;
-    }
-
-    .banda h6 {
-        padding: 0 16px;
+    #barra-navegacao {
+        padding: 30px 120px;
+        justify-content: space-between;
     }
 }
 
@@ -63,12 +52,9 @@
         background: url(../assets/Banner.png),lightgray 50% / cover no-repeat;
     }
 
-    .linha {
-        width: 359px;
-    }
-
-    .banda h6 {
-        padding: 0 16px;
+    #barra-navegacao {
+        padding: 30px 120px;
+        justify-content: space-between;
     }
 }
 
@@ -78,7 +64,6 @@
         flex-direction: column;
         align-items: center;
         gap: 32px;
-        background-color: var(--cor-primaria);
     }
 
     #banner {
@@ -88,44 +73,6 @@
         justify-content: center;
         align-items: center;
         background: url(../assets/Banner.png);
-    }
-
-    #experiencia {
-        padding: 32px 60px;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #info-experiencia {
-        padding: 0 0;
-        margin-left: 0;
-        margin-top: 32px;
-    }
-
-    .dias {
-        display: flex;
-        padding: 48px 60px;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 48px;
-    }
-
-    .linha {
-        width: 100px;
-    }
-
-    .bandas {
-        gap: 32px;
-    }
-
-    .banda h5 {
-        padding: 0 10px;
-    }
-
-    .banda h6 {
-        padding: 0 12px;
     }
 
     #rodape {
@@ -154,8 +101,6 @@ body {
 
 #barra-navegacao {
     display: flex;
-    padding: 30px 120px;
-    justify-content: space-between;
     background-color: var(--cor-primaria);
 }
 
@@ -186,144 +131,6 @@ body {
     font-size: 64px;
     font-family: var(--caslistoga-font);
     color: var(--cor-escura);
-}
-
-.secoes {
-    margin: 64px 120px;
-}
-
-#experiencia {
-    display: flex;
-}
-
-#info-experiencia {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 340px;
-    gap: 24px;
-    margin-left: 48px;
-    padding: 24px 0;
-}
-
-#info-experiencia h6 {
-    text-align: center;
-    font-size: 32px;
-    font-family: var(--raleway-font);
-    font-weight: 700;
-    color: var(--cor-escura);
-}
-
-#info-experiencia p {
-    font-size: 20px;
-    font-family: var(--raleway-font);
-    font-weight: 500;
-    font-weight: normal;
-    line-height: 40px;
-    color: var(--cor-escura);
-    text-align: center;
-
-}
-
-#info-experiencia button {
-    display: flex;
-    padding: 8px 16px;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-    border-radius: 16px;
-    background-color: var(--cor-primaria);
-    color: var(--cor-clara);
-    cursor: pointer;
-}
-
-#info-experiencia button:hover {
-    transition: 0.4s;
-    box-shadow: 4px 4px 0 0 var(--cor-escura);
-}
-
-
-#line-up {
-    font-size: 64px;
-    font-family: var(--raleway-font);
-    color: var(--cor-escura);
-    text-align: center;
-}
-
-.data-festa {
-    display: flex;
-    align-items: center;
-}
-
-.linha {
-    height: 1px;
-    background-color: var(--cor-secundaria);
-}
-
-.dia-festa {
-    background-color: var(--cor-secundaria);
-    color: var(--cor-clara);
-    font-size: 48px;
-    font-family: var(--caslistoga-font);
-    padding: 16px;
-    margin: 0 32px;
-    font-weight: normal;
-}
-
-.bandas {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-
-.banda {
-    display: flex;
-    align-items: center;
-}
-
-.banda h2 {
-    font-size: 48px;
-    font-family: var(--raleway-font);
-    font-weight: 800;
-    font-style: normal;
-    color: var(--cor-escura);
-    line-height: normal;
-    margin: 48px 0 16px 0;
-}
-
-.banda h5 {
-    font-size: 40px;
-    font-family: var(--raleway-font);
-    font-weight: 700;
-    font-style: normal;
-    color: var(--cor-escura);
-    line-height: normal;
-    margin: 14px 0;
-    padding: 0 12px;
-}
-
-.banda h6 {
-    font-size: 32px;
-    font-family: var(--raleway-font);
-    font-weight: 700;
-    font-style: normal;
-    color: var(--cor-escura);
-    line-height: normal;
-    margin: 16px 0;
-
-}
-
-.banda h4 {
-    font-size: 32px;
-    font-family: var(--raleway-font);
-    font-weight: 500;
-    font-style: normal;
-    color: var(--cor-escura);
-    font-style: normal;
-    line-height: normal;
-    margin: 16px 0;
-    padding: 0 16px;
 }
 
 #rodape {
