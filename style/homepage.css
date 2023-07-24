@@ -85,6 +85,10 @@
     }
 }
 
+.secoes {
+    margin: 64px 120px;
+}
+
 #experiencia {
     display: flex;
 }
