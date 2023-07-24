@@ -41,6 +41,7 @@
 @media screen and (min-width: 1279px) and (max-width: 1441px) {
 
     #banner {
+        
         display: flex;
         height: 407px;
         flex-direction: column;

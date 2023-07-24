@@ -97,10 +97,7 @@
 
     #banner {
         background: url(../assets/Tema-Verão/Imagens/2-Banner-A-Experiência.png), lightgray 50% / cover no-repeat;
-    }
-
-    main{
-        margin-top: 32px;
+        mix-blend-mode: multiply;
     }
 
     main section{
