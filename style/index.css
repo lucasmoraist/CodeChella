@@ -32,6 +32,10 @@
         flex-shrink: 0;
     }
 
+    #banner h1{
+        font-size: 64px;
+    }
+
     #btn-mobile{
         display: none;
     }
@@ -60,6 +64,11 @@
         align-items: center;
         flex-shrink: 0;
     }
+
+    #banner h1{
+        font-size: 32px;
+    }
+
     #btn-mobile{
         display: none;
     }
@@ -87,6 +96,10 @@
     }
     #barra-navegacao ul{
         display: flex;
+    }
+
+    #banner h1{
+        font-size: 32px;
     }
 
     #btn-mobile{
@@ -119,6 +132,10 @@
         padding: 32px 24px;
         justify-content: space-between;
         align-items: center;
+    }
+
+    #banner h1{
+        font-size: 32px;
     }
 
     #rodape{
@@ -205,6 +222,14 @@ body {
     background-image: linear-gradient(180deg, #BFDAE6 0%, #FCF0DD 50%, #FACF9D 100%);
 }
 
+#banner h1{
+    color: var(--cor-escura);
+    text-align: center;
+    font-family: var(--caslistoga-font);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
 
 #barra-navegacao {
     display: flex;
@@ -230,13 +255,6 @@ body {
 
 #barra-navegacao ul a:hover {
     color: #1d4d65;
-}
-
-#banner h1 {
-    text-align: center;
-    font-size: 64px;
-    font-family: var(--caslistoga-font);
-    color: var(--cor-escura);
 }
 
 #rodape {

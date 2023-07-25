@@ -184,16 +184,6 @@
         flex-direction: column;
     }
 
-    #banner h1{
-        color: var(--cor-escura);
-        text-align: center;
-        font-family: var(--caslistoga-font);
-        font-size: 32px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-    }
-
     .secoes {
         margin: 24px 25px;
     }
