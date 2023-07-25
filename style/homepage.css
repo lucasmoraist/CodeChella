@@ -21,16 +21,36 @@
         background-size: cover;
     }
 
-    #info-experiencia p {
+    #info-experiencia {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 340px;
+        gap: 24px;
         margin: 0 150px;
+        padding: 24px 0;
+    }
+
+    .secoes{
+        margin: 56px 120px;
     }
 
     .data-festa {
         justify-content: center;
     }
 
+    #line-up {
+        font-size: 64px;
+    }
+
     .linha {
+        height: 1px;
         width: 600px;
+        background-color: var(--cor-secundaria);
+    }
+
+    .dia-festa{
+        font-size: 48px;
     }
 
     .banda h6 {
@@ -44,8 +64,35 @@
         background: url(../assets/Banner.png),lightgray 50% / cover no-repeat;
     }
 
+    #info-experiencia {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 340px;
+        gap: 24px;
+        margin-left: 48px;
+        padding: 24px 0;
+    }
+    #line-up {
+        font-size: 64px;
+    }
+
+    .secoes{
+        margin: 56px 120px;
+    }
+
     .linha {
+        height: 1px;
         width: 359px;
+        background-color: var(--cor-secundaria);
+    }
+
+    .data-festa{
+        justify-content: center;
+    }
+
+    .dia-festa{
+        font-size: 48px;
     }
 
     .banda h6 {
@@ -54,6 +101,15 @@
 }
 
 @media screen and (min-width: 760px) and (max-width: 800px) {
+    
+    #banner {
+        display: flex;
+        height: 384px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: url(../assets/Banner.png);
+    }
 
     #experiencia {
         padding: 32px 60px;
@@ -62,7 +118,16 @@
         align-items: center;
     }
 
+    .secoes {
+        margin: 32px 60px;
+    }
+
     #info-experiencia {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 340px;
+        gap: 24px;
         padding: 0 0;
         margin-left: 0;
         margin-top: 32px;
@@ -77,8 +142,18 @@
         gap: 48px;
     }
 
+    #line-up {
+        font-size: 64px;
+    }
+
     .linha {
+        height: 1px;
         width: 100px;
+        background-color: var(--cor-secundaria);
+    }
+
+    .dia-festa{
+        font-size: 48px;
     }
 
     .bandas {
@@ -94,22 +169,105 @@
     }
 }
 
-.secoes {
-    margin: 64px 120px;
+@media screen and (min-width: 359px) and (max-width: 759px){
+    #banner {
+        display: flex;
+        padding: 23px 0px;
+        height: 270px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: url(../assets/Banner.png),lightgray 50% / cover no-repeat;
+        
+    }
+    #experiencia{
+        flex-direction: column;
+    }
+
+    #banner h1{
+        color: var(--cor-escura);
+        text-align: center;
+        font-family: var(--caslistoga-font);
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .secoes {
+        margin: 24px 25px;
+    }
+
+    #experiencia{
+        width: 100%;
+        gap: 24px;
+    }
+
+    #imagem-homepage1{
+        width: 312px;
+        height: auto;
+    }
+
+    #info-experiencia {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+
+    #info-experiencia h6{
+        text-align: center;
+        font-style: normal;
+        line-height: normal;
+        align-self: stretch;
+    }
+
+    #info-experiencia button{
+        align-self: stretch;
+    }
+
+    #line-up{
+        padding: 32px 0px;
+        font-size: 48px;
+        line-height: normal;
+    }
+
+    .dia-festa{
+        text-align: center;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .dias{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 48px;
+    }
+
+    .data-festa{
+        text-align: center;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .banda{
+        flex-direction: column;
+        gap: 32px;
+        align-self: stretch;
+        text-align: center;
+    }
 }
 
 #experiencia {
     display: flex;
-}
-
-#info-experiencia {
-    display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    height: 340px;
-    gap: 24px;
-    margin-left: 48px;
-    padding: 24px 0;
 }
 
 #info-experiencia h6 {
@@ -137,6 +295,7 @@
     justify-content: center;
     align-items: center;
     gap: 16px;
+    border: none;
     border-radius: 16px;
     background-color: var(--cor-primaria);
     color: var(--cor-clara);
@@ -150,7 +309,6 @@
 
 
 #line-up {
-    font-size: 64px;
     font-family: var(--raleway-font);
     color: var(--cor-escura);
     text-align: center;
@@ -161,15 +319,9 @@
     align-items: center;
 }
 
-.linha {
-    height: 1px;
-    background-color: var(--cor-secundaria);
-}
-
 .dia-festa {
     background-color: var(--cor-secundaria);
     color: var(--cor-clara);
-    font-size: 48px;
     font-family: var(--caslistoga-font);
     padding: 16px;
     margin: 0 32px;
@@ -186,6 +338,7 @@
 .banda {
     display: flex;
     align-items: center;
+    text-align: center;
 }
 
 .banda h2 {
