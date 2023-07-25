@@ -13,7 +13,21 @@
     <header>
 
         <nav id="barra-navegacao">
-            <img src="assets/Logo-branco.png" alt="Logo branco do evento" width="170px">
+            <a href="index.html"><img src="assets/Logo-branco.png" alt="Logo branco do evento" width="170px"></a>
+            <button id="btn-mobile">menu</button>
+
+            <!--Script do botão para telas de mobile-->
+            <script>
+                const btnMobile = document.getElementById('btn-mobile');
+
+                function toggleMenu(){
+                    const nav = document.getElementById('barra-navegacao')
+                    nav.classList.toggle('active');
+                }
+
+                btnMobile.addEventListener('click', toggleMenu);
+            </script>
+
             <ul>
                 <li><a href="pages/experience.html">A experiência</a></li>
                 <li><a href="pages/sectors.html">Mapa de Setores</a></li>
