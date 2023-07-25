@@ -14,7 +14,7 @@
 
 }
 
-@media screen and (min-width: 1441px) and (max-width: 2000px){
+@media screen and (min-width: 1441px) {
 
     #banner {
         background: url(../assets/Tema-Verão/Imagens/2-Banner-A-Experiência.png), lightgray 50% / cover no-repeat;
@@ -97,7 +97,7 @@
 
 }
 
-@media screen and (min-width: 760px) and (max-width: 800px){
+@media screen and (min-width: 760px) and (max-width: 1278px){
 
     #banner {
         display: flex;
