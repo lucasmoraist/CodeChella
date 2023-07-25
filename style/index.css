@@ -121,29 +121,6 @@
         align-items: center;
     }
 
-    #btn-mobile{
-        display: flex;
-        padding: .5rem 1rem;
-        font-size: 1rem;
-        border: none;
-        background: none;
-        cursor: pointer;
-    }
-    #barra-navegacao ul{
-        display: none;
-        position: absolute;
-        flex-direction: column;
-        text-align: center;
-        gap: 8px;
-        background: var(--cor-primaria);
-        top: 12%;
-        right: 0%;
-    }
-
-    #barra-navegacao.active ul{
-        display: flex;
-    }
-
     #rodape{
         display: flex;
         padding: 24px;
@@ -159,6 +136,68 @@
 
     #rodape p{
         text-align: center;
+    }
+
+    /*Menu Hamburguer*/
+
+    #btn-mobile{
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: .5rem;
+    }
+
+    #hamburguer{
+        color: var(--cor-clara);
+        border-top: 2px solid;
+        width: 20px;
+    }
+    #hamburguer::after, #hamburguer::before{
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background-color: currentColor;
+        margin-top: 4px;
+        transition: .3s;
+        position: relative;
+    }
+
+    #barra-navegacao ul{
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+        background: var(--cor-primaria);
+        top: 12%;
+        right: 1%;
+        border-radius: 5px;
+    }
+
+    #barra-navegacao ul li:hover{
+        background-color: rgba(6, 73, 106, 0.5);
+        width: 100%;
+    }
+
+    #barra-navegacao.active ul{
+        display: flex;
+    }
+    #barra-navegacao.active #hamburguer{
+        border-top-color: transparent;
+    }
+
+    #barra-navegacao.active #hamburguer::after{
+        transform: rotate(-135deg);
+        top: -6px;
+    }
+
+    #barra-navegacao.active #hamburguer::before{
+        transform: rotate(135deg);
+        
     }
 }
 

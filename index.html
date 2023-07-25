@@ -11,24 +11,15 @@
 
 <body>
     <header>
-
         <nav id="barra-navegacao">
             <a href="index.html"><img src="assets/Logo-branco.png" alt="Logo branco do evento" width="170px"></a>
-            <button id="btn-mobile">menu</button>
 
-            <!--Script do botão para telas de mobile-->
-            <script>
-                const btnMobile = document.getElementById('btn-mobile');
+            <button id="btn-mobile" aria-label="Abrir Menu" aria-haspopup="true" aria-controls="menu"
+                aria-expanded="false">
+                <span id="hamburguer"></span>
+            </button>
 
-                function toggleMenu(){
-                    const nav = document.getElementById('barra-navegacao')
-                    nav.classList.toggle('active');
-                }
-
-                btnMobile.addEventListener('click', toggleMenu);
-            </script>
-
-            <ul>
+            <ul id="menu" role="menu">
                 <li><a href="pages/experience.html">A experiência</a></li>
                 <li><a href="pages/sectors.html">Mapa de Setores</a></li>
                 <li><a href="#">Informações</a></li>
@@ -146,23 +137,24 @@
     </main>
 
     <footer id="rodape">
-            <div>
-                <img src="assets/Logo-cinza.png" width="233.905px">
-                <p>Acesse nossas redes:</p>
-                <div id="redes">
-                    <img src="assets/Tema-Verão/Ícones/Ícone whatsapp.png" alt="Logo do Whatsapp" width="32px">
-                    <img src="assets/Tema-Verão/Ícones/Ícone Twitch.png" alt="Logo da Twitch" width="32px">
-                    <img src="assets/Tema-Verão/Ícones/Ícone instagram.png" alt="Logo do Instagram"
-                        width="32px">
-                    <img src="assets/Tema-Verão/Ícones/Ícone twitter.png" alt="Logo do Twitter" width="32px">
-                </div>
+        <div>
+            <img src="assets/Logo-cinza.png" width="233.905px">
+            <p>Acesse nossas redes:</p>
+            <div id="redes">
+                <img src="assets/Tema-Verão/Ícones/Ícone whatsapp.png" alt="Logo do Whatsapp" width="32px">
+                <img src="assets/Tema-Verão/Ícones/Ícone Twitch.png" alt="Logo da Twitch" width="32px">
+                <img src="assets/Tema-Verão/Ícones/Ícone instagram.png" alt="Logo do Instagram" width="32px">
+                <img src="assets/Tema-Verão/Ícones/Ícone twitter.png" alt="Logo do Twitter" width="32px">
             </div>
+        </div>
 
-            <div id="criador">
-                <p>&copy; Lucas de Morais N Taguchi, 2023</p>
-                <p>Projeto fictício</p>
-            </div>
+        <div id="criador">
+            <p>&copy; Lucas de Morais N Taguchi, 2023</p>
+            <p>Projeto fictício</p>
+        </div>
     </footer>
+
+    <script src="js/btn-mobile.js"></script>
 </body>
 
 </html>
