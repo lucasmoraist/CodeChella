@@ -54,7 +54,7 @@
     }
 }
 
-@media screen and (min-width: 1279px) and (max-width: 1441px) {
+@media screen and (min-width: 1279px) and (max-width: 1440px) {
 
     #banner {
         display: flex;
