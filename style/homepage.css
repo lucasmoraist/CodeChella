@@ -31,6 +31,28 @@
         padding: 24px 0;
     }
 
+    #info-experiencia button {
+        display: flex;
+        padding: 8px 16px;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        border: none;
+        border-radius: 16px;
+        background-color: var(--cor-primaria);
+        color: var(--cor-clara);
+        cursor: pointer;
+    }
+    
+    #info-experiencia button:hover {
+        transition: 0.4s;
+        box-shadow: 4px 4px 0 0 var(--cor-escura);
+    }
+
+    #info-experiencia button:not(:hover){
+        transition: 0.4s;
+    }
+
     .secoes{
         margin: 56px 120px;
     }
@@ -73,12 +95,35 @@
         margin-left: 48px;
         padding: 24px 0;
     }
+
+    #info-experiencia button {
+        display: flex;
+        padding: 8px 16px;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        border: none;
+        border-radius: 16px;
+        background-color: var(--cor-primaria);
+        color: var(--cor-clara);
+        cursor: pointer;
+    }
+    
+    #info-experiencia button:hover {
+        transition: 0.4s;
+        box-shadow: 4px 4px 0 0 var(--cor-escura);
+    }
+
+    #info-experiencia button:not(:hover){
+        transition: 0.4s;
+    }
+
     #line-up {
         font-size: 64px;
     }
 
     .secoes{
-        margin: 56px 120px;
+        margin: 60px 90px;
     }
 
     .linha {
@@ -261,6 +306,10 @@
     align-items: center;
 }
 
+#info-experiencia a{
+    text-decoration: none;
+}
+
 #info-experiencia h6 {
     text-align: center;
     font-size: 32px;
@@ -279,25 +328,6 @@
     text-align: center;
 
 }
-
-#info-experiencia button {
-    display: flex;
-    padding: 8px 16px;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-    border: none;
-    border-radius: 16px;
-    background-color: var(--cor-primaria);
-    color: var(--cor-clara);
-    cursor: pointer;
-}
-
-#info-experiencia button:hover {
-    transition: 0.4s;
-    box-shadow: 4px 4px 0 0 var(--cor-escura);
-}
-
 
 #line-up {
     font-family: var(--raleway-font);
