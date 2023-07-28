@@ -73,6 +73,7 @@
 
     .dia-festa{
         font-size: 48px;
+        margin: 0 32px;
     }
 
     .banda h6 {
@@ -138,6 +139,7 @@
 
     .dia-festa{
         font-size: 48px;
+        margin: 0 32px;
     }
 
     .banda h6 {
@@ -176,6 +178,24 @@
         padding: 0 0;
         margin-left: 0;
         margin-top: 32px;
+    }
+
+    #info-experiencia button {
+        display: flex;
+        padding: 8px 16px;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        border: none;
+        border-radius: 16px;
+        background-color: var(--cor-primaria);
+        color: var(--cor-clara);
+        cursor: pointer;
+        box-shadow: 4px 4px 0 0 var(--cor-escura);
+    }
+
+    .dia-festa{
+        margin: 0 32px;
     }
 
     .dias {
@@ -228,6 +248,20 @@
     }
     #experiencia{
         flex-direction: column;
+    }
+
+    #info-experiencia button {
+        display: flex;
+        padding: 8px 16px;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        border: none;
+        border-radius: 16px;
+        background-color: var(--cor-primaria);
+        color: var(--cor-clara);
+        cursor: pointer;
+        box-shadow: 4px 4px 0 0 var(--cor-escura);
     }
 
     .secoes {
@@ -345,7 +379,6 @@
     color: var(--cor-clara);
     font-family: var(--caslistoga-font);
     padding: 16px;
-    margin: 0 32px;
     font-weight: normal;
 }
 
