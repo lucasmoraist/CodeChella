@@ -14,13 +14,165 @@
 
 }
 
-#banner{
-    background: url(../assets/Tema-Verão/Imagens/5-Banner-garanta-seu-ingresso.png);
+@media screen and (min-width: 1440px) {
+    #banner{
+        background: url(../assets/Tema-Verão/Imagens/5-Banner-garanta-seu-ingresso.png);
+        background-size: 2000px 460px;
+    } 
+
+    main{
+        padding: 48px 120px;
+    }
+
+    main h3{
+        font-size: 48px;
+    }
+
+    label{
+        text-align: center;
+    }
+
+    form button{
+        display: flex;
+        padding: 8px 16px;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        border: none;
+        border-radius: 16px;
+        background-color: var(--cor-primaria);
+        cursor: pointer;
+    }
+    
+    form button:hover{
+        transition: .4s;
+        box-shadow: 4px 4px 0 0 var(--cor-escura);
+    }
+    
+    form button:not(:hover){
+        transition: .4s;
+    }
+}
+
+@media screen and (min-width: 1279px) and (max-width: 1440px) {
+    #banner{
+        background: url(../assets/Tema-Verão/Imagens/5-Banner-garanta-seu-ingresso.png);
+    }
+
+    main{
+        padding: 48px 120px;
+    }
+
+    main h3{
+        font-size: 48px;
+    }
+
+    label{
+        text-align: center;
+    }
+
+    form button{
+        display: flex;
+        padding: 8px 16px;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        border: none;
+        border-radius: 16px;
+        background-color: var(--cor-primaria);
+        cursor: pointer;
+    }
+    
+    form button:hover{
+        transition: .4s;
+        box-shadow: 4px 4px 0 0 var(--cor-escura);
+    }
+    
+    form button:not(:hover){
+        transition: .4s;
+    }
+}
+
+@media screen and (min-width: 760px) and (max-width: 1278px) {
+    #banner{
+        display: flex;
+        height: 384px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: url(../assets/Tema-Verão/Imagens/5-Banner-garanta-seu-ingresso.png);
+        background-size: 800px 450px;
+    }
+
+    main{
+        padding: 48px 60px;
+    }
+
+    main h3{
+        font-size: 48px;
+    }
+
+    fieldset{
+        flex-direction: column;
+    }
+
+    label{
+        text-align: center;
+    }
+
+    form button{
+        display: flex;
+        padding: 8px 16px;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        border: none;
+        border-radius: 16px;
+        background-color: var(--cor-primaria);
+        box-shadow: 4px 4px 0 0 var(--cor-escura);
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 359px) and (max-width: 759px){
+    #banner{
+        display: flex;
+        height: 384px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: url(../assets/Tema-Verão/Imagens/5-Banner-garanta-seu-ingresso.png);
+        background-size: 500px 390px;
+    }
+
+    main{
+        padding: 32px 24px;
+    }
+
+    main h3{
+        font-size: 32px;
+    }
+
+    fieldset{
+        flex-direction: column;
+    }
+    
+    form button{
+        display: flex;
+        padding: 8px 16px;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        border: none;
+        border-radius: 16px;
+        background-color: var(--cor-primaria);
+        box-shadow: 4px 4px 0 0 var(--cor-escura);
+        cursor: pointer;
+    }
 }
 
 main{
     display: flex;
-    padding: 48px 120px;
     flex-direction: column;
     align-items: center;
     gap: 48px;
@@ -31,7 +183,6 @@ main h3{
     color: var(--cor-escura);
     text-align: center;
     font-family: var(--caslistoga-font);
-    font-size: 48px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -39,7 +190,7 @@ main h3{
 
 form{
     display: flex;
-    width: 795px;
+    width: 100%;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
@@ -57,7 +208,6 @@ form div{
 
 label{
     color: var(--cor-escura);
-    text-align: center;
     font-family: var(--raleway-font);
     font-size: 32px;
     font-style: normal;
@@ -96,27 +246,6 @@ fieldset{
     gap: 24px;
     align-self: stretch;
     border: none;
-}
-
-form button{
-    display: flex;
-    padding: 8px 16px;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-    border: none;
-    border-radius: 16px;
-    background-color: var(--cor-primaria);
-    cursor: pointer;
-}
-
-form button:hover{
-    transition: .4s;
-    box-shadow: 4px 4px 0 0 var(--cor-escura);
-}
-
-form button:not(:hover){
-    transition: .4s;
 }
 
 form button a{
