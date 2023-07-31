@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/index.css">
+    <link rel="stylesheet" href="../style/reservation.css">
     <title>Informações Gerais</title>
 </head>
 <body>
@@ -30,7 +31,41 @@
         </div>
     </header>
 
-    <main></main>
+    <main>
+        <h3>Preencha o formulário a seguir:</h3>
+        
+        <form action="">
+            <div>
+                <label for="nome">Nome Completo:</label>
+                <input type="text" name="nome" id="nome" required>
+            </div>
+
+            <div>
+                <label for="email">Email:</label>
+                <input type="text" name="email" id="email" required>
+            </div>
+
+            <fieldset>
+                <div>
+                    <label for="ingresso">Tipo de ingresso:</label>
+                    <select name="ingresso" id="ingresso" required>
+                        <option selected disabled value="">Tipo de Ingresso</option>
+                        <option value="">Pista Premium</option>
+                        <option value="">Pista Comum</option>
+                        <option value="">Cadeira Térreo</option>
+                        <option value="">Cadeira Superior</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="dt_nasc">Data de nascimento:</label>
+                    <input type="date" name="dt_nasc" id="dt_nasc" required>
+                </div>
+            </fieldset>
+
+            <button type="submit"><a href="ticket.html">Avançar!</a><img src="../assets/Tema-Verão/Ícones/local_activity.png" alt="Seta indicando para avançar"></button>
+        </form>
+    </main>
 
     <footer id="rodape">
         <div>
