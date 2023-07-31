@@ -32,17 +32,6 @@
         text-align: center;
     }
 
-    form button{
-        display: flex;
-        padding: 8px 16px;
-        justify-content: center;
-        align-items: center;
-        gap: 16px;
-        border: none;
-        border-radius: 16px;
-        background-color: var(--cor-primaria);
-        cursor: pointer;
-    }
     
     form button:hover{
         transition: .4s;
@@ -69,18 +58,6 @@
 
     label{
         text-align: center;
-    }
-
-    form button{
-        display: flex;
-        padding: 8px 16px;
-        justify-content: center;
-        align-items: center;
-        gap: 16px;
-        border: none;
-        border-radius: 16px;
-        background-color: var(--cor-primaria);
-        cursor: pointer;
     }
     
     form button:hover{
@@ -121,14 +98,6 @@
     }
 
     form button{
-        display: flex;
-        padding: 8px 16px;
-        justify-content: center;
-        align-items: center;
-        gap: 16px;
-        border: none;
-        border-radius: 16px;
-        background-color: var(--cor-primaria);
         box-shadow: 4px 4px 0 0 var(--cor-escura);
         cursor: pointer;
     }
@@ -167,6 +136,7 @@
         border-radius: 16px;
         background-color: var(--cor-primaria);
         box-shadow: 4px 4px 0 0 var(--cor-escura);
+        color: var(--cor-clara);
         cursor: pointer;
     }
 }
@@ -246,6 +216,19 @@ fieldset{
     gap: 24px;
     align-self: stretch;
     border: none;
+}
+
+form button{
+    display: flex;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border: none;
+    border-radius: 16px;
+    background-color: var(--cor-primaria);
+    color: var(--cor-clara);
+    cursor: pointer;
 }
 
 form button a{
