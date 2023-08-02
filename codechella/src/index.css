@@ -14,7 +14,7 @@
 
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
@@ -23,12 +23,12 @@ body {
     background-image: linear-gradient(180deg, #BFDAE6 0%, #FCF0DD 50%, #FACF9D 100%);
 }
 
-h1{
-        color: var(--cor-escura);
-        text-align: center;
-        font-family: var(--caslistoga-font);
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
+h1 {
+    color: var(--cor-escura);
+    text-align: center;
+    font-family: var(--caslistoga-font);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 
 }
