@@ -348,15 +348,6 @@ const DivHome = styled.div`
     }
 }
 
-#home h1{
-    color: var(--cor-escura);
-    text-align: center;
-    font-family: var(--caslistoga-font);
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
 #experiencia {
     display: flex;
     justify-content: center;

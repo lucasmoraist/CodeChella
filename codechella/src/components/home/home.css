@@ -38,15 +38,13 @@
 }
 
 @media screen and (min-width: 359px) and (max-width: 759px) {
-    #banner {
+    #home {
         display: flex;
-        padding: 23px 0px;
-        height: 270px;
+        height: 384px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: url(../../assets/Banner.png),lightgray 50% / cover no-repeat;
-        background-size: 410px 320px; 
-        
+        background: url(../../assets/Banner.png);
+        background-size: 410px 390px;
     }
 }
