@@ -15,10 +15,20 @@
 }
 
 @media screen and (min-width: 1441px) {
+    #banner h1{
+        font-size: 64px;
+    }
 
     #banner {
-        background: url(../assets/Banner.png), lightgray 50% / cover no-repeat;
+        background: url(../../assets/Banner.png), lightgray 50% / cover no-repeat;
         background-size: cover;
+        display: flex;
+        height: 407px;
+        padding: 23px 417px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
     }
 
     #info-experiencia {
@@ -82,9 +92,12 @@
 }
 
 @media screen and (min-width: 1279px) and (max-width: 1440px) {
+    #banner h1{
+        font-size: 32px;
+    }
 
     #banner {
-        background: url(../assets/Banner.png),lightgray 50% / cover no-repeat;
+        background: url(../../assets/Banner.png),lightgray 50% / cover no-repeat;
     }
 
     #info-experiencia {
@@ -148,14 +161,17 @@
 }
 
 @media screen and (min-width: 760px) and (max-width: 1278px) {
-    
+    #banner h1{
+        font-size: 32px;
+    }
+
     #banner {
         display: flex;
         height: 384px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: url(../assets/Banner.png);
+        background: url(../../assets/Banner.png);
     }
 
     #experiencia {
@@ -234,7 +250,11 @@
     }
 }
 
-@media screen and (min-width: 359px) and (max-width: 759px){
+@media screen and (min-width: 359px) and (max-width: 759px) {
+    #banner h1{
+        font-size: 32px;
+    }
+
     #banner {
         display: flex;
         padding: 23px 0px;
@@ -242,7 +262,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: url(../assets/Banner.png),lightgray 50% / cover no-repeat;
+        background: url(../../assets/Banner.png),lightgray 50% / cover no-repeat;
         background-size: 410px 320px; 
         
     }
@@ -332,6 +352,15 @@
         align-self: stretch;
         text-align: center;
     }
+}
+
+#banner h1{
+    color: var(--cor-escura);
+    text-align: center;
+    font-family: var(--caslistoga-font);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 #experiencia {

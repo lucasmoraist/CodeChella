@@ -14,12 +14,6 @@
 
 }
 
-* {
-    padding: 0;
-    margin: 0;
-}
-
-
 @media screen and (min-width: 1441px) {
 
     #banner {
@@ -47,10 +41,6 @@
 
     #barra-navegacao ul {
         display: flex;
-    }
-
-    #rodape{
-        padding: 24px 120px;
     }
 }
 
@@ -82,9 +72,6 @@
         display: flex;
     }
 
-    #rodape{
-        padding: 24px 120px;
-    }
 }
 
 @media screen and (min-width: 760px) and (max-width: 1278px) {
@@ -105,27 +92,6 @@
     #btn-mobile{
         display: none;
     }
-
-    #rodape {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 32px;
-        padding: 24px 120px;
-    }
-
-    #redes{
-        display: flex;
-        justify-content: center;
-    }
-
-    #redes p {
-        text-align: center;
-    }
-
-    #criador {
-        text-align: center;
-    }
 }
 
 @media screen and (min-width: 359px) and (max-width: 759px) {
@@ -138,23 +104,6 @@
 
     #banner h1{
         font-size: 32px;
-    }
-
-    #rodape{
-        display: flex;
-        padding: 24px;
-        flex-direction: column;
-        align-items: center;
-        gap: 32px;
-    }
-    #redes{
-        display: flex;
-        justify-content: center;
-        gap: 8px;
-    }
-
-    #rodape p{
-        text-align: center;
     }
 
     /*Menu Hamburguer*/
@@ -220,19 +169,6 @@
     }
 }
 
-body {
-    background-image: linear-gradient(180deg, #BFDAE6 0%, #FCF0DD 50%, #FACF9D 100%);
-}
-
-#banner h1{
-    color: var(--cor-escura);
-    text-align: center;
-    font-family: var(--caslistoga-font);
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
 #barra-navegacao {
     display: flex;
     background-color: var(--cor-primaria);
@@ -257,20 +193,4 @@ body {
 
 #barra-navegacao ul a:hover {
     color: #1d4d65;
-}
-
-#rodape {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-shrink: 0;
-    background-color: #FACF9D;
-}
-
-#rodape p {
-    font-size: 20px;
-    font-family: var(--raleway-font);
-    font-weight: 500;
-    line-height: 40px;
-    color: var(--cor-escura);
 }

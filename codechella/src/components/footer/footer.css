@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&family=Raleway:wght@500;700;800&display=swap');
+
+:root {
+    /*Váriaveis de fonte*/
+    --raleway-font: 'Raleway', sans-serif;
+    --caslistoga-font: 'Calistoga', cursive;
+
+    /*Váriaveis de cores*/
+
+    --cor-clara: #fff;
+    --cor-escura: #444;
+    --cor-primaria: #2E7BA2;
+    --cor-secundaria: #DF9010;
+
+}
+
+@media screen and (min-width: 1441px) {
+    #rodape{
+        padding: 24px 120px;
+    }
+}
+
+@media screen and (min-width: 1279px) and (max-width: 1440px) {
+    #rodape{
+        padding: 24px 120px;
+    }
+}
+
+@media screen and (min-width: 760px) and (max-width: 1278px) {
+    #rodape {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 32px;
+        padding: 24px 120px;
+    }
+
+    #redes{
+        display: flex;
+        justify-content: center;
+    }
+
+    #redes p {
+        text-align: center;
+    }
+
+    #criador {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 359px) and (max-width: 759px) {
+    #rodape{
+        display: flex;
+        padding: 24px;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+    }
+    #redes{
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    #rodape p{
+        text-align: center;
+    }
+}
+
+#rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    background-color: #FACF9D;
+}
+
+#rodape p {
+    font-size: 20px;
+    font-family: var(--raleway-font);
+    font-weight: 500;
+    line-height: 40px;
+    color: var(--cor-escura);
+}
