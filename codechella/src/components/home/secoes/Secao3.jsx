@@ -6,7 +6,7 @@ export default function Secao3() {
             <section class="secoes dias">
                 <div class="data-festa">
                     <div class="linha"></div>
-                    <h3 class="dia-festa">SÁBADO&LT;11/03&GT;</h3>
+                    <h3 class="dia-festa">SÁBADO{"<"}11/03{">"}</h3>
                     <div class="linha"></div>
                 </div>
 
