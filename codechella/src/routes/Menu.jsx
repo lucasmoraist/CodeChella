@@ -7,7 +7,7 @@ import './menu.css';
 export default function Menu(){
     return(
         <nav id="barra-navegacao">
-            <Link><img src={LogoBranco} alt="" /></Link>
+            <Link to="/"><img src={LogoBranco} alt="" /></Link>
 
             <button id="btn-mobile" aria-label="Abrir Menu" aria-haspopup="true" aria-controls="menu"
                 aria-expanded="false">
