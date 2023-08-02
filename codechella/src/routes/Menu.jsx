@@ -1,18 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from 'react-router-dom';
+import { FaBars } from 'react-icons/fa';
+import styled from 'styled-components';
+import Sidebar from "./SideBar/SideBar";
 
 import LogoBranco from '../assets/Tema-Verão/Logos/Logo branco.png'
 import './menu.css';
 
-export default function Menu(){
-    return(
-        <nav id="barra-navegacao">
+export default function Menu() {
+
+    const [sideBar, setSideBar] = useState(false);
+    const showSideBar = () => setSideBar(!sideBar);
+
+    return (
+        <DivNav>
             <Link to="/"><img src={LogoBranco} alt="" /></Link>
 
-            <button id="btn-mobile" aria-label="Abrir Menu" aria-haspopup="true" aria-controls="menu"
-                aria-expanded="false">
-                <span id="hamburguer"></span>
-            </button>
+            <FaBars onClick={showSideBar} />
+
+            {sideBar && <Sidebar active={setSideBar}/>}
 
             <ul>
                 <li><Link to="/experiencia">A experiência</Link></li>
@@ -20,6 +26,118 @@ export default function Menu(){
                 <li><Link to="/informacoes">Informações</Link></li>
                 <li><Link to="/ingressos">Ingressos</Link></li>
             </ul>
-        </nav>
+        </DivNav>
     )
 }
+
+const DivNav = styled.div`
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&family=Raleway:wght@500;700;800&display=swap');
+
+:root {
+    /*Váriaveis de fonte*/
+    --raleway-font: 'Raleway', sans-serif;
+    --caslistoga-font: 'Calistoga', cursive;
+
+    /*Váriaveis de cores*/
+
+    --cor-clara: #fff;
+    --cor-escura: #444;
+    --cor-primaria: #2E7BA2;
+    --cor-secundaria: #DF9010;
+
+}
+
+@media screen and (min-width: 1441px) {
+    padding: 32px 60px;
+
+    > svg {
+        display: none;
+    }
+
+    img{
+        width: 200px;
+    }
+}
+
+@media screen and (min-width: 1279px) and (max-width: 1440px) {
+    padding: 32px 60px;
+
+    > svg {
+        display: none;
+    }
+
+    img{
+        width: 200px;
+    }
+}
+
+@media screen and (min-width: 760px) and (max-width: 1278px) {
+    padding: 32px 30px;
+
+    > svg {
+        display: none;
+    }
+
+    img{
+        display: flex;
+        align-self: center;
+        width: 150px;
+    }
+
+    a{
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 359px) and (max-width: 759px) {
+    padding: 32px 30px;
+
+    > svg {
+        display: block;
+    }
+
+    img{
+        display: flex;
+        align-self: center;
+        width: 150px;
+    }
+
+    a{
+        font-size: 16px;
+    }
+}
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--cor-primaria);
+
+    > svg {
+        color: white;
+        cursor: pointer;
+    }
+
+ul{
+    display: none;
+    align-items: flex-start;
+    gap: 32px;
+    list-style: none;
+}
+
+a{
+    color: var(--cor-clara);
+    text-align: center;
+    font-family: var(--raleway-font);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px; 
+    text-decoration: none;
+    color: var(--cor-clara);
+}
+
+a:hover{
+    color: #1d4d65;
+}
+
+
+`
