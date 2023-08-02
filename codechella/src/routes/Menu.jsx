@@ -17,7 +17,6 @@ export default function Menu() {
             <Link to="/"><img src={LogoBranco} alt="" /></Link>
 
             <FaBars onClick={showSideBar} />
-
             {sideBar && <Sidebar active={setSideBar}/>}
 
             <ul>
@@ -54,6 +53,10 @@ const DivNav = styled.div`
         display: none;
     }
 
+    ul{
+        display: flex;
+    }
+
     img{
         width: 200px;
     }
@@ -66,6 +69,10 @@ const DivNav = styled.div`
         display: none;
     }
 
+    ul{
+        display: flex;
+    }
+
     img{
         width: 200px;
     }
@@ -76,6 +83,10 @@ const DivNav = styled.div`
 
     > svg {
         display: none;
+    }
+
+    ul{
+        display: flex;
     }
 
     img{
@@ -93,7 +104,15 @@ const DivNav = styled.div`
     padding: 32px 30px;
 
     > svg {
-        display: block;
+        position: relative;
+        width: 20px;
+        height: 20px;
+        color: white;
+        cursor: pointer;
+    }
+
+    ul{
+        display: none;
     }
 
     img{
@@ -112,32 +131,26 @@ const DivNav = styled.div`
     align-items: center;
     background-color: var(--cor-primaria);
 
-    > svg {
-        color: white;
-        cursor: pointer;
+    
+
+    ul{
+        align-items: flex-start;
+        gap: 32px;
+        list-style: none;
     }
 
-ul{
-    display: none;
-    align-items: flex-start;
-    gap: 32px;
-    list-style: none;
-}
+    a{
+        color: var(--cor-clara);
+        text-align: center;
+        font-family: var(--raleway-font);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 40px; 
+        text-decoration: none;
+        color: var(--cor-clara);
+    }
 
-a{
-    color: var(--cor-clara);
-    text-align: center;
-    font-family: var(--raleway-font);
-    font-style: normal;
-    font-weight: 700;
-    line-height: 40px; 
-    text-decoration: none;
-    color: var(--cor-clara);
-}
-
-a:hover{
-    color: #1d4d65;
-}
-
-
+    a:hover{
+        color: #1d4d65;
+    }
 `

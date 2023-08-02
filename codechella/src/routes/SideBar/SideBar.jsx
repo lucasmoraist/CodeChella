@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaTimes } from 'react-icons/fa'
+import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 
 const Sidebar = ({ active }) => {
@@ -9,8 +10,14 @@ const Sidebar = ({ active }) => {
     }
   
     return (
-      <DivSide sidebar={active}>
-        <FaTimes onClick={closeSidebar} />  
+      <DivSide sideBar={active}>
+        <FaTimes onClick={closeSidebar} />
+          <ul>
+            <li><Link to="/experiencia">A experiência</Link></li>
+            <li><Link to="/setores">Mapa de Setores</Link></li>
+            <li><Link to="/informacoes">Informações</Link></li>
+            <li><Link to="/ingressos">Ingressos</Link></li>
+          </ul>
       </DivSide>
     )
   }
@@ -36,12 +43,13 @@ const DivSide = styled.div`
 
 background-color: var(--cor-primaria);
 position: absolute;
+border-radius: 10px;
 height: 243px;
-width: 193px;
+width: 175px;
 top: 0px;
 left: 0px;
-left: ${props => props.sidebar ? '50%' : '0'};
-top: ${props => props.sidebar ? '15%' : '0'};
+left: ${props => props.sideBar ? '51%' : '0'};
+top: ${props => props.sideBar ? '30px' : '0'};
 animation: showSidebar .4s;
 
 > svg {
@@ -49,19 +57,18 @@ animation: showSidebar .4s;
     color: white;
     width: 20px;
     height: 20px;
-    top: -60px;
-    left: 130px;
+    top: 12px;
+    left: 126px;
     cursor: pointer;
 }
 
-@keyframes showSidebar {
-  from {
-    opacity: 0;
-    width: 0;
-  }
-  to {
-    opacity: 1;
-    width: 300px;
-  }
+ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  gap: 5px;
 }
+
+
 `
