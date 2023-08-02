@@ -12,14 +12,14 @@ export default function Footer(){
     return(
         <footer id="rodape">
             <div>
-                <img src={LogoCinza} width="233.905px"/>
+                <img src={LogoCinza} width={"233.905px"}/>
                 <p>Acesse nossas redes:</p>
 
                 <div id="redes">
-                    <img src={Whats} alt="Logo do Whatsapp" width="32px"/>
-                    <img src={Twitch} alt="Logo do Twitch" width="32px"/>
-                    <img src={Insta} alt="Logo do Instagram" width="32px"/>
-                    <img src={Twitter} alt="Logo do Twitter" width="32px"/>
+                    <img src={Whats} alt="Logo do Whatsapp" width={"32px"}/>
+                    <img src={Twitch} alt="Logo do Twitch" width={"32px"}/>
+                    <img src={Insta} alt="Logo do Instagram" width={"32px"}/>
+                    <img src={Twitter} alt="Logo do Twitter" width={"32px"}/>
                 </div>
             </div>
 

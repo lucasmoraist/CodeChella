@@ -24,6 +24,8 @@
     #rodape{
         padding: 24px 120px;
     }
+
+    
 }
 
 @media screen and (min-width: 760px) and (max-width: 1278px) {
@@ -74,6 +76,12 @@
     align-items: center;
     flex-shrink: 0;
     background-color: #FACF9D;
+}
+
+#rodape div:first-child{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #rodape p {
