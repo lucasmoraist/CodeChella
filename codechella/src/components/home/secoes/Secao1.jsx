@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import FotoEvento from '../../../assets/Tema-Verão/Imagens/1 -Imagem homepage1.png'
 import IconeIngresso from '../../../assets/Tema-Verão/Ícones/ícone ingresso.png';
 import '../home.css';
@@ -21,13 +22,13 @@ export default function Secao1() {
                             linguagens e, claro, tecnologia! Somos um festival diverso, com vários artistas e referências.
                             Divirta-se!</p>
 
-                        <a href="pages/ticket-reservation.html">
+                        <Link to="/ingressos">
                             <button>
                                 Comprar Ingresso!
                                 <img src={IconeIngresso} id="icone-ingresso"
                                     alt="ícone de um ingresso" />
                             </button>
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </section>
