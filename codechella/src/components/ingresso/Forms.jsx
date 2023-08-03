@@ -1,20 +1,117 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
 import './forms.css'
 
 const Forms = () => {
+
+    const [idade, setIdade] = useState('');
+    const [cpf, setCpf] = useState('');
+    const [mensagem, setMensagem] = useState('');
+
+    const handleIdadeChange = (event) => {
+        setIdade(event.target.value);
+    };
+
+
+    const handleCpfChange = (event) => {
+        setCpf(event.target.value);
+    };
+
+    const validarIdade = (dataNascimento) => {
+        const hoje = new Date();
+        const nascimento = new Date(dataNascimento);
+        const diffAnos = hoje.getFullYear() - nascimento.getFullYear();
+
+        return diffAnos >= 16 || (diffAnos >= 13 );
+    };
+
+    const validarCpf = (value) => {
+        if (value.length !== 11) {
+        return false;
+        }
+
+        const digits = value.split('').map(Number);
+        const [a, b, c, d, e, f, g, h, i, j, k] = digits;
+
+        if (
+        a === b &&
+        b === c &&
+        c === d &&
+        d === e &&
+        e === f &&
+        f === g &&
+        g === h &&
+        h === i &&
+        i === j &&
+        j === k
+        ) {
+        return false;
+        }
+
+        let sum = 0;
+        for (let i = 0; i < 9; i++) {
+        sum += digits[i] * (10 - i);
+        }
+
+        let remainder = sum % 11;
+        if (remainder < 2) {
+        remainder = 0;
+        } else {
+        remainder = 11 - remainder;
+        }
+
+        if (remainder !== digits[9]) {
+        return false;
+        }
+
+        sum = 0;
+        for (let i = 0; i < 10; i++) {
+        sum += digits[i] * (11 - i);
+        }
+
+        remainder = sum % 11;
+        if (remainder < 2) {
+        remainder = 0;
+        } else {
+        remainder = 11 - remainder;
+        }
+
+        if (remainder !== digits[10]) {
+        return false;
+        }
+
+        return true;
+    };
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        if (!validarCpf(cpf)) {
+        setMensagem('CPF inválido.');
+        return;
+        }
+
+        if (!validarIdade(idade)) {
+        setMensagem('Você não tem idade suficiente para entrar.');
+        return;
+        }
+
+        if((validarCpf) && (validarIdade)){
+            window.location.href = "/ingresso";
+        }
+    };
+    
     return(
         <DivForm>
             <div id="reserva">
                 <h1>Garanta seu Ingresso</h1>
             </div>
-
             <div id="main">
                 <h3>Preencha o formulário a seguir:</h3>
-                <form action="">
+                <form onSubmit={handleSubmit}>
                     <div>
                         <label htmlFor="nome">Nome:</label>
-                        <input type="text" />
+                        <input type="text" maxLength={40} required/>
                     </div>
 
                     <div>
@@ -24,7 +121,7 @@ const Forms = () => {
 
                     <div>
                         <label htmlFor="cpf">CPF:</label>
-                        <input type="text" />
+                        <input type="text" value={cpf} onChange={handleCpfChange}/>
                     </div>
 
                     <fieldset>
@@ -41,12 +138,13 @@ const Forms = () => {
 
                         <div>
                             <label htmlFor="data">Data de Nascimento:</label>
-                            <input type="date" />
+                            <input type="date" value={idade} onChange={handleIdadeChange} />
                         </div>
                     </fieldset>
 
-                    <button>Avançar!</button>
+                    <button type="submit">Avançar!</button>
                 </form>
+                {mensagem && <p style={{color: "red"}}>{mensagem}</p>}
             </div>
         </DivForm>
     )
