@@ -140,7 +140,32 @@ const DivFaq = styled.div`
     --cor-secundaria: #DF9010;
 
 }
-    width: 996px;   
+@media screen and (min-width: 1200px){
+    width: 996px; 
+    button{
+        width: 996px
+        font-size: 32px;
+    }
+}
+
+@media screen and (min-width: 760px) and (max-width: 1278px){
+    width: 648px;
+
+    button{
+        width: 648px
+        font-size: 32px;
+    }
+}
+
+@media screen and (min-width: 359px) and (max-width: 759px){
+    width: 312px;
+    button{
+        width: 312px;
+        font-size: 24px;
+    }
+}
+
+      
 
     .arrow {
         margin-left: auto;
@@ -182,7 +207,6 @@ const DivFaq = styled.div`
     button{
         border: none;
         display: flex;
-        width: 996px;
         padding: 16px;
         justify-content: space-between;
         align-items: center;    
@@ -190,7 +214,6 @@ const DivFaq = styled.div`
 
         color: var(--cor-clara);
         text-align: center;
-        font-size: 32px;
         font-family: var(--raleway-font);
         font-style: normal;
         font-weight: 700;
