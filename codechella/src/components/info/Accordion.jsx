@@ -143,7 +143,7 @@ const DivFaq = styled.div`
 @media screen and (min-width: 1200px){
     width: 996px; 
     button{
-        width: 996px
+        width: 996px;
         font-size: 32px;
     }
 }
@@ -152,7 +152,7 @@ const DivFaq = styled.div`
     width: 648px;
 
     button{
-        width: 648px
+        width: 648px;
         font-size: 32px;
     }
 }
@@ -164,9 +164,6 @@ const DivFaq = styled.div`
         font-size: 24px;
     }
 }
-
-      
-
     .arrow {
         margin-left: auto;
         transition: transform 0.25s cubic-bezier(0, 0, 0, 1);
