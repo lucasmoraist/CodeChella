@@ -5,7 +5,6 @@ import styled from 'styled-components';
 import Sidebar from "./SideBar/SideBar";
 
 import LogoBranco from '../assets/Tema-Verão/Logos/Logo branco.png'
-import './menu.css';
 
 export default function Menu() {
 
@@ -80,6 +79,10 @@ const DivNav = styled.div`
 
 @media screen and (min-width: 760px) and (max-width: 1278px) {
     padding: 32px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
 
     > svg {
         display: none;

@@ -4,6 +4,7 @@ import Home from '../components/home/Home'
 import Experiencia from "../components/experiencia/Experiencia";
 import Mapa from "../components/mapa/Mapa";
 import Info from "../components/info/GeneralInfo";
+import Forms from "../components/ingresso/Forms";
 
 export default function MainRoutes(){
     return(
@@ -12,6 +13,7 @@ export default function MainRoutes(){
             <Route path="/experiencia" element={<Experiencia/>}/>
             <Route path="/setores" element={<Mapa/>}/>
             <Route path="/informacoes" element={<Info/>}/>
+            <Route path="/ingressos" element={<Forms/>}/>
         </Routes>
     )
 }
