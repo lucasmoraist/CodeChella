@@ -25,16 +25,16 @@ export default function Faq() {
     return (
         <DivFaq>
             <Accordion transition transitionTimeout={100}>
-                <AccordionItem header="Quais serão as atrações?" initialEntered>
+                <AccordionItem header="Quais serão as atrações?">
                     <p className="conteudo">Teremos dois dias de shows, o primeiro (11/03) com bandas de rock, e o segundo (12/03) com bandas
                         pop. <span>Confira o line-up em detalhes clicando neste link!</span></p>
                 </AccordionItem>
 
-                <AccordionItem header="Qual a classificação etária?" initialEntered>
+                <AccordionItem header="Qual a classificação etária?">
                     <p className="conteudo">A classificação etária do evento é 16 (dezesseis) anos.</p>
                 </AccordionItem>
 
-                <AccordionItem header="Quais são os setores disponíveis?" initialEntered>
+                <AccordionItem header="Quais são os setores disponíveis?">
                     <ul className="conteudo">
                         <li>Pista Premium</li>
                         <li>Pista Comum</li>
@@ -43,7 +43,7 @@ export default function Faq() {
                     </ul>
                 </AccordionItem>
 
-                <AccordionItem header="Quais são os itens proibidos?" initialEntered>
+                <AccordionItem header="Quais são os itens proibidos?">
                     <ol className="conteudo">
                         <li>garrafas de qualquer gênero, tamanho ou material (exemplos: garrafas de água mineral,
                             “squeezes”, etc), exceto garrafas plásticas para consumo de água, desde que sem tampa. A
@@ -108,7 +108,7 @@ export default function Faq() {
                     </ol>
                 </AccordionItem>
 
-                <AccordionItem header="Quais são os itens permitidos?" initialEntered>
+                <AccordionItem header="Quais são os itens permitidos?">
                     <ol className="conteudo">
                         <li>alimentos industrializados devidamente lacrados (exemplos: biscoitos, torradas, barras de
                             cereal etc.);
