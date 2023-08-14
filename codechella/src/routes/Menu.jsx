@@ -22,7 +22,7 @@ export default function Menu() {
                 <li><Link to="/experiencia">A experiência</Link></li>
                 <li><Link to="/setores">Mapa de Setores</Link></li>
                 <li><Link to="/informacoes">Informações</Link></li>
-                <li><Link to="/ingressos">Ingressos</Link></li>
+                <li><Link to="/forms">Ingressos</Link></li>
             </ul>
         </DivNav>
     )
