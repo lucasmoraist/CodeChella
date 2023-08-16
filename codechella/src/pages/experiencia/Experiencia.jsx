@@ -16,7 +16,7 @@ export default function Experiencia() {
 
             <main>
                 <section class="inclusao">
-                    <img src={Experiencia1}/>
+                    <img src={Experiencia1} alt='Imagem de uma experiencia no evento'/>
                         <div class="descricao-esquerda">
                             <h6>Acessibilidade e Inclusão</h6>
                             <p>
@@ -36,11 +36,11 @@ export default function Experiencia() {
                             carbono zero, com utilização de copos retornáveis, coleta e destinação adequada de resíduos, e transporte coletivo.
                         </p>
                     </div>
-                    <img src={Experiencia2}/>
+                    <img src={Experiencia2} alt='Imagem de uma experiencia no evento'/>
                 </section>
 
                 <section class="atracoes">
-                    <img src={Experiencia3}/>
+                    <img src={Experiencia3} alt='Imagem de uma experiencia no evento'/>
                         <div class="descricao-esquerda">
                             <h6>Atrações</h6>
                             <p>

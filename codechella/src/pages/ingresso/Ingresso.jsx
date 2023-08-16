@@ -2,22 +2,41 @@ import React from "react";
 import { styled } from "styled-components";
 
 import './ingresso.css'
+import Code from '../../assets/Tema-Verão/Logos/Logo ingresso.png';
+import Simbolo from '../../assets/Tema-Verão/Logos/Símbolo ingresso.png';
+import QR from '../../assets/Tema-Verão/Ícones/Qr code 1.png';
 
-export default function Ingresso(){
+export default function Ingresso({ nome, setor }) {
 
-    const pessoaDataResult = usePessoaData();
-    const data = pessoaDataResult.data;
 
-    return(
-        <DivMain> 
+    return (
+        <DivMain>
             <div id="ingresso">
                 <h1>Seu ingresso está aqui!</h1>
             </div>
-            
+
             <div id="container">
                 <div id="conteudo">
-                    <h6>Uhul, agora sim! Seu ingresso está aqui, apresente na entrada do evento e divirta-se!</h6>
-                    
+                    <h6 id="titulo">Uhul, agora sim! Seu ingresso está aqui, apresente na entrada do evento e divirta-se!</h6>
+
+                    <div id="molde">
+                        <div id="header">
+                            <img src={Code} alt='Nome do evento' />
+                            <img src={Simbolo} alt='Simbolo do evento' />
+                        </div>
+
+                        <div id="main">
+                            <img src={QR} alt='QR code' />
+                            
+                            <div>
+                                <h6>{nome}</h6>
+                                <p>Informações</p>
+                                <p>Setor: {setor}</p>
+                                <p>Data: 11/04</p>
+                                <p>Local: São Paulo-SP</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </DivMain>
@@ -68,7 +87,7 @@ const DivMain = styled.div`
     gap: 32px;
 }
 
-#conteudo h6{
+#titulo{
     color: var(--cor-escura);
     text-align: center;
     font-family: var(--raleway-font);
@@ -77,5 +96,49 @@ const DivMain = styled.div`
     font-weight: 700;
     line-height: normal;
 }
+    #molde {
+        display: flex;
+        padding: 32px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 32px;
+        align-self: stretch;
+        border: 0px solid var(--cor-escura);
+        background: linear-gradient(180deg, #BFDAE6 0%, #FCF0DD 50%, #FACF9D 100%);
+        box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.15);
+    }
+
+    #header{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        align-self: stretch;
+    }
+
+    #main{
+        display: flex;
+        align-items: flex-start;
+        gap: 48px;
+        align-self: stretch;
+    }
+
+    #main h6{
+        color: var(--cor-escura);
+        font-family: var(--raleway-font);
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    #main p{
+        color: var(--cor-escura);
+        font-family: var(--raleway-font);
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 40px; /* 200% */
+    }
 
 `

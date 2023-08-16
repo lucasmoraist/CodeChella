@@ -12,7 +12,7 @@ export default function Footer(){
     return(
         <footer id="rodape">
             <div>
-                <img src={LogoCinza} width={"233.905px"}/>
+                <img src={LogoCinza} alt="Logo cinza do evento" width={"233.905px"}/>
                 <p>Acesse nossas redes:</p>
 
                 <div id="redes">

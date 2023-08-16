@@ -22,7 +22,7 @@ export default function Secao1() {
                             linguagens e, claro, tecnologia! Somos um festival diverso, com vários artistas e referências.
                             Divirta-se!</p>
 
-                        <Link to="/ingressos">
+                        <Link to="/forms">
                             <button>
                                 Comprar Ingresso!
                                 <img src={IconeIngresso} id="icone-ingresso"
