@@ -18,7 +18,7 @@ export default function Menu() {
             <FaBars onClick={showSideBar} />
             {sideBar && <Sidebar active={setSideBar}/>}
 
-            <ul>
+            <ul id="lista">
                 <li><Link to="/experiencia">A experiência</Link></li>
                 <li><Link to="/setores">Mapa de Setores</Link></li>
                 <li><Link to="/informacoes">Informações</Link></li>
@@ -114,8 +114,8 @@ const DivNav = styled.div`
         cursor: pointer;
     }
 
-    ul{
-        display: none;
+    #lista{
+        display: none; 
     }
 
     img{

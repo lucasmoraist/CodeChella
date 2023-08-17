@@ -51,7 +51,6 @@ left: 0px;
 left: ${props => props.sideBar ? '51%' : '0'};
 top: ${props => props.sideBar ? '30px' : '0'};
 animation: showSidebar .4s;
-margin-top: 10px;
 
 > svg {
     position: absolute;
