@@ -3,9 +3,12 @@
 ## Resumo do Projeto CodeChella
 Durante o Challenge Front-End será desenvolvido um site para a divulgação do festival de tecnologia “CodeChella”.
 
-Será desenvolvido uma tela inicial para divulgação do line-up, uma tela para explicar o que é o evento, uma com o mapa e setores e outra para dúvidas.
-
-Além disso, o festival precisa gerar ingressos dinâmicos com nome, número do ticket e tipo de ingresso. Para isso, será necessário um formulário para receber os dados dos usuários.
+Será desenvolvido:
+- Uma tela inicial para divulgação do line-up.
+- Uma tela para explicar o que é o evento.
+- Uma com o mapa e setores.
+- Uma para dúvidas.
+- E outra com formulário para gerar seu ingresso de forma dinâmica, onde estará ligada a uma api spring em desenvolvimento.
 
 ## Comandos para rodar o projeto
 1º Passo
