@@ -4,7 +4,7 @@ import { styled } from "styled-components";
 import './ingresso.css'
 import Code from '../../assets/Tema-Verão/Logos/Logo ingresso.png';
 import Simbolo from '../../assets/Tema-Verão/Logos/Símbolo ingresso.png';
-import QR from '../../assets/Tema-Verão/Ícones/Qr code 1.png';
+import ModelIngresso from "../../components/ingresso/Ingresso";
 
 export default function Ingresso({ nome, setor }) {
 
@@ -25,17 +25,7 @@ export default function Ingresso({ nome, setor }) {
                             <img src={Simbolo} alt='Simbolo do evento' />
                         </div>
 
-                        <div id="main">
-                            <img src={QR} alt='QR code' />
-                            
-                            <div>
-                                <h6>{nome}</h6>
-                                <p>Informações</p>
-                                <p>Setor: {setor}</p>
-                                <p>Data: 11/04</p>
-                                <p>Local: São Paulo-SP</p>
-                            </div>
-                        </div>
+                        <ModelIngresso nome={nome} setor={setor}/>
                     </div>
                 </div>
             </div>
