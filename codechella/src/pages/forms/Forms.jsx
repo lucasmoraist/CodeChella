@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { DivForm } from './Style';
 import './forms.css'
 import Ingresso from '../ingresso/Ingresso';
+import Input from '../../components/input/Input';
+import DropIngresso from '../../components/dropIngresso/DropIngresso';
 
 const Forms = () => {
     
@@ -136,53 +138,51 @@ const Forms = () => {
         )
     }
 
-
     return (
         <DivForm>
+
             <div id="reserva">
                 <h1>Garanta seu Ingresso</h1>
             </div>
+
             <div id="main">
+
                 <h3>Preencha o formulário a seguir:</h3>
+
                 <form onSubmit={handleSubmit}>
+
                     <div>
                         <label>Nome:</label>
-                        <input type="text" value={nome} onChange={(e) => {setNome(e.target.value)}} required/>
+                        <Input tipo={"text"} value={nome} setValue={setNome}/>
                     </div>
+
                     <div>
                         <label>Email:</label>
-                        <input type="email" value={email} onChange={(e) => {setEmail(e.target.value)}} required/>
+                        <Input tipo={"email"} value={email} setValue={setEmail}/>
                     </div>
+
                     <div>
                         <label>CPF:</label>
-                        <input type="text" value={cpf} onChange={(e) => {setCpf(e.target.value)}} required/>
+                        <Input tipo={"text"} value={cpf} setValue={setCpf}/>
                         {erroCPF && <p>{erroCPF}</p>}
                     </div>
+
                     <fieldset>
                         <div>
                             <label>Ingresso:</label>
-                            <select value={setor} onChange={(e) => {setSetor(e.target.value)}}>
-                                <option hidden disabled>Tipo de Ingresso</option>
-                                <option value="Pista comum">Pista comum</option>
-                                <option value="Pista premium">Pista premium</option>
-                                <option value="Cadeira inferior">Cadeira inferior</option>
-                                <option value="Cadeira superior">Cadeira superior</option>
-                            </select>
+                            <DropIngresso value={setor} setValue={setSetor}/>
                         </div>
                         <div>
                             <label>Data de Nascimento:</label>
-                            <input
-                                type="date"
-                                value={dtNasc}
-                                onChange={(e) => {setDtNasc(e.target.value)}}
-                                required
-                            />
-                            {erroIdade && <p>{erroIdade}</p>}
+                            <Input tipo={"date"} value={dtNasc} setValue={setDtNasc}/>
 
+                            {erroIdade && <p>{erroIdade}</p>}
                         </div>
                     </fieldset>
+
                     <button type="submit" >Enviar</button>
                 </form>
+
                 <p>{mensagem}</p>
             </div>
 
