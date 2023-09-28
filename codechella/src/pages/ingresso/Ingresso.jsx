@@ -1,7 +1,7 @@
 import React from "react";
 import { styled } from "styled-components";
 
-import './ingresso.css'
+import '../../index.css';
 import Code from '../../assets/Tema-Verão/Logos/Logo ingresso.png';
 import Simbolo from '../../assets/Tema-Verão/Logos/Símbolo ingresso.png';
 import ModelIngresso from "../../components/ingresso/Ingresso";

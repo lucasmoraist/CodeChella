@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { DivForm } from './Style';
-import './forms.css'
+import '../../index.css';
 import Ingresso from '../ingresso/Ingresso';
 import Input from '../../components/input/Input';
 import DropIngresso from '../../components/dropIngresso/DropIngresso';

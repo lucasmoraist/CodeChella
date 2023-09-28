@@ -3,7 +3,7 @@ import React from 'react';
 import Experiencia1 from '../../assets/Tema-Verão/Imagens/2 - A experiência1.png';
 import Experiencia2 from '../../assets/Tema-Verão/Imagens/2 - A Experiência2.png';
 import Experiencia3 from '../../assets/Tema-Verão/Imagens/2 - A Experiência3.png';
-import './experiencia.css';
+import '../../index.css';
 import DivXp from './DivXp';
 
 export default function Experiencia() {

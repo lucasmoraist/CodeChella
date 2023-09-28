@@ -5,7 +5,7 @@ import Secao3 from "./secoes/Secao3";
 import Secao4 from "./secoes/Secao4";
 import styled from 'styled-components';
 
-import './home.css'
+import '../../index.css';
 
 import ImagemRodape from '../../assets/Tema-Verão/Imagens/1 - Imagem homepage2.png';
 

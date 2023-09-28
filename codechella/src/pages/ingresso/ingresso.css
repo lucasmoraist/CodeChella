@@ -1,9 +1,0 @@
-#ingresso{
-    height: 384px;
-    background: url(../../assets/Tema-Verão/Imagens/6\ -\ Banner\ -\ seu\ ingresso\ está\ aqui.png);
-    background-size: 1300px 500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}

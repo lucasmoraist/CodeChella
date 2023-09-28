@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import './info.css'
+import '../../index.css';
 import Faq from "./Accordion";
 
 export default function Info() {

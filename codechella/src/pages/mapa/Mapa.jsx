@@ -5,7 +5,7 @@ import MapaSetores from '../../assets/Tema-Verão/Imagens/3 - Mapa setores1.png'
 import Pista from '../../assets/Tema-Verão/Imagens/3 - Mapa de setores2.png';
 import PistaPremium from '../../assets/Tema-Verão/Imagens/3 - Mapa de setores3.png';
 import Cadeiras from '../../assets/Tema-Verão/Imagens/3 - Mapa de setores4.png';
-import './mapa.css'
+import '../../index.css';
 
 export default function Mapa() {
     return (
