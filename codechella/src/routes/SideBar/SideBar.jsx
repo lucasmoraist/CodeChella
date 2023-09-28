@@ -16,7 +16,7 @@ const Sidebar = ({ active }) => {
             <li><Link to="/experiencia">A experiência</Link></li>
             <li><Link to="/setores">Mapa de Setores</Link></li>
             <li><Link to="/informacoes">Informações</Link></li>
-            <li><Link to="/ingressos">Ingressos</Link></li>
+            <li><Link to="/forms">Ingressos</Link></li>
           </ul>
       </DivSide>
     )
@@ -48,7 +48,7 @@ height: 243px;
 width: 175px;
 top: 0px;
 left: 0px;
-left: ${props => props.sideBar ? '51%' : '0'};
+left: ${props => props.sideBar ? '56%' : '0'};
 top: ${props => props.sideBar ? '30px' : '0'};
 animation: showSidebar .4s;
 
