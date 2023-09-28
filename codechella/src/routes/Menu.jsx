@@ -54,6 +54,8 @@ const DivNav = styled.div`
 
     ul{
         display: flex;
+        gap: 32px;
+        align-items: flex-start;
     }
 
     img{
@@ -70,6 +72,8 @@ const DivNav = styled.div`
 
     ul{
         display: flex;
+        gap: 32px;
+        align-items: flex-start;
     }
 
     img{
@@ -90,6 +94,8 @@ const DivNav = styled.div`
 
     ul{
         display: flex;
+        gap: 32px;
+        align-items: flex-start;
     }
 
     img{
@@ -111,11 +117,10 @@ const DivNav = styled.div`
         width: 20px;
         height: 20px;
         color: white;
-        cursor: pointer;
     }
 
     #lista{
-        display: none; 
+        display: none;
     }
 
     img{
@@ -126,6 +131,7 @@ const DivNav = styled.div`
 
     a{
         font-size: 16px;
+        text-align: center;
     }
 }
 
@@ -137,8 +143,6 @@ const DivNav = styled.div`
     
 
     ul{
-        align-items: flex-start;
-        gap: 32px;
         list-style: none;
     }
 
