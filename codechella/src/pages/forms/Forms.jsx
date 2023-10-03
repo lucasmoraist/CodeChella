@@ -87,6 +87,7 @@ const Forms = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
+        
         if (!validarCPF(cpf)) {
             setErroCPF('CPF inválido');
             return;
@@ -106,7 +107,7 @@ const Forms = () => {
         }
 
         try {
-            const response = await fetch('http://localhost:8050/api/pessoa', {
+            const response = await fetch('https://api-codechella.azurewebsites.net/api/pessoa', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
