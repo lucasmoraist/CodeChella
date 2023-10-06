@@ -6,7 +6,7 @@ import Code from '../../assets/Tema-Verão/Logos/Logo ingresso.png';
 import Simbolo from '../../assets/Tema-Verão/Logos/Símbolo ingresso.png';
 import ModelIngresso from "../../components/ingresso/Ingresso";
 
-export default function Ingresso({ nome, setor }) {
+export default function Ingresso({ nome, setor, dia }) {
 
 
     return (
@@ -25,7 +25,7 @@ export default function Ingresso({ nome, setor }) {
                             <img src={Simbolo} alt='Simbolo do evento' />
                         </div>
 
-                        <ModelIngresso nome={nome} setor={setor}/>
+                        <ModelIngresso nome={nome} setor={setor} dia={dia}/>
                     </div>
                 </div>
             </div>
