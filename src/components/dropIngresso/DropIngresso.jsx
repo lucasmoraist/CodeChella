@@ -1,6 +1,6 @@
 import React from "react";
 
-const DropIngresso = ({value, setValue}) => {
+const DropIngresso = ({ value, setValue }) => {
     return (
         <div>
             <select value={value} onChange={(e) => { setValue(e.target.value) }}>
@@ -14,4 +14,16 @@ const DropIngresso = ({value, setValue}) => {
     )
 }
 
-export default DropIngresso;
+const DropDiaFestival = ({ value, setValue }) => {
+    return (
+        <div>
+            <select value={value} onChange={(e) => { setValue(e.target.value) }}>
+                <option selected disabled>Escolha seu dia</option>
+                <option value="11/03">11/03</option>
+                <option value="12/03">12/13</option>
+            </select>
+        </div>
+    )
+}
+
+export { DropDiaFestival, DropIngresso };
