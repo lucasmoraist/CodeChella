@@ -4,6 +4,8 @@ import '../../index.css';
 import Ingresso from '../ingresso/Ingresso';
 import Input from '../../components/input/Input';
 import DropIngresso from '../../components/dropIngresso/DropIngresso';
+import { ValidaCpf } from '../../components/validacao/ValidaCpf';
+import { ShowAge } from '../../components/validacao/ValidaIdade';
 
 const Forms = () => {
     
@@ -17,97 +19,30 @@ const Forms = () => {
     const [mensagem, setMensagem] = useState('');
     const [enviado, setEnviado] = useState(false);
 
-    const validarCPF = (value) => {
-        if (value.length !== 11) {
-            return false;
-        }
-
-        const digits = value.split('').map(Number);
-        const [a, b, c, d, e, f, g, h, i, j, k] = digits;
-
-        if (
-            a === b &&
-            b === c &&
-            c === d &&
-            d === e &&
-            e === f &&
-            f === g &&
-            g === h &&
-            h === i &&
-            i === j &&
-            j === k
-        ) {
-            return false;
-        }
-
-        let sum = 0;
-        for (let i = 0; i < 9; i++) {
-            sum += digits[i] * (10 - i);
-        }
-
-        let remainder = sum % 11;
-        if (remainder < 2) {
-            remainder = 0;
-        } else {
-            remainder = 11 - remainder;
-        }
-
-        if (remainder !== digits[9]) {
-            return false;
-        }
-
-        sum = 0;
-        for (let i = 0; i < 10; i++) {
-            sum += digits[i] * (11 - i);
-        }
-
-        remainder = sum % 11;
-        if (remainder < 2) {
-            remainder = 0;
-        } else {
-            remainder = 11 - remainder;
-        }
-
-        if (remainder !== digits[10]) {
-            return false;
-        }
-
-        return true;
-    };
-
-    const showAge = (dtNasc) => {
-        const hoje = new Date();
-        const nascimento = new Date(dtNasc);
-        
-        let idade = hoje.getFullYear() - nascimento.getFullYear();
-        
-        return idade;
-    };
-
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        
-        if (!validarCPF(cpf)) {
+        if (!ValidaCpf(cpf)) {
             setErroCPF('CPF inválido');
             return;
         } else {
             setErroCPF('');
         }
 
-        const idade = showAge(dtNasc);
+        const idade = ShowAge(dtNasc);
 
         if (idade < 10) {
-        setErroIdade('Você deve ter mais de 10 anos para entrar no evento');
+            setErroIdade('Você deve ter mais de 10 anos para entrar no evento');
         return;
         } else if(idade > 10 && idade < 16){
-        setErroIdade('Apenas acompanhado');
+            setErroIdade('Apenas acompanhado');
         } else{
             setErroIdade('')
         }
 
         try {
-            const response = await fetch('https://api-codechella.azurewebsites.net/api/pessoa', {
+            //const response = await fetch('https://api-codechella.azurewebsites.net/api/pessoa', {
+            const response = await fetch('http://localhost:8050/api/pessoa', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
