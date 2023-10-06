@@ -4,7 +4,7 @@ import Code from '../../assets/Tema-Verão/Logos/Logo ingresso.png';
 import Simbolo from '../../assets/Tema-Verão/Logos/Símbolo ingresso.png';
 import QR from '../../assets/Tema-Verão/Ícones/Qr code 1.png';
 
-export default function Card({ nome, setor }){
+export default function Card({ nome, setor,dia }){
 
     return(
         <DivCard>
@@ -21,7 +21,7 @@ export default function Card({ nome, setor }){
                     <h6>{nome}</h6>
                     <p>Ingresso:</p>
                     <p>Setor: {setor}</p>
-                    <p>Data: 11/04</p>
+                    <p>Data: {dia}</p>
                     <p>Local: São Paulo-SP</p>
                 </div>
             </div>
