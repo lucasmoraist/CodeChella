@@ -30,16 +30,7 @@ const Forms = () => {
             setErroCPF('');
         }
 
-        const idade = ShowAge(dtNasc);
-
-        if (idade < 10) {
-            setErroIdade('Você deve ter mais de 10 anos para entrar no evento');
-            return;
-        } else if (idade > 10 && idade < 16) {
-            setErroIdade('Apenas acompanhado');
-        } else {
-            setErroIdade('')
-        }
+        ShowAge(dtNasc, setErroIdade);
 
         try {
             //const response = await fetch('https://api-codechella.azurewebsites.net/api/pessoa', {
@@ -56,22 +47,39 @@ const Forms = () => {
                 }),
             });
 
-            const responseIngresso = await fetch('http://localhost:8050/api/ingresso', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    diaFestival,
-                    setor
-                }),
-            });
+            if (responsePessoa.ok) {
+                const pessoaData = await responsePessoa.json();
+                console.log(pessoaData);
+                const id = pessoaData.id;
 
-            if (responsePessoa.ok && responseIngresso.ok) {
-                setMensagem('Dados enviados com sucesso!');
-                setEnviado(true);
-            } else {
-                setMensagem('Erro ao enviar os dados. Tente novamente.');
+                //const response = await fetch('https://api-codechella.azurewebsites.net/api/ingresso', {
+                const responseIngresso = await fetch('http://localhost:8050/api/ingresso', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        diaFestival,
+                        setor,
+                        pessoa: {
+                            id: id,
+                        }
+                    }),
+                })
+
+                if (responseIngresso.ok) {
+                    const ingressoData = await responseIngresso.json();
+                    console.log('Ingresso criado:', ingressoData);
+                } else {
+                    console.error('Erro ao criar o ingresso:', responseIngresso.status);
+                }
+
+                if (responsePessoa.ok && responseIngresso.ok) {
+                    setMensagem('Dados enviados com sucesso!');
+                    setEnviado(true);
+                } else {
+                    setMensagem('Erro ao enviar os dados. Tente novamente.');
+                }
             }
         } catch (error) {
             setMensagem('Erro ao enviar os dados. Tente novamente.');
