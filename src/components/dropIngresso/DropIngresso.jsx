@@ -20,7 +20,7 @@ const DropDiaFestival = ({ value, setValue }) => {
             <select value={value} onChange={(e) => { setValue(e.target.value) }}>
                 <option selected disabled>Escolha seu dia</option>
                 <option value="11/03">11/03</option>
-                <option value="12/03">12/13</option>
+                <option value="12/03">12/03</option>
             </select>
         </div>
     )
