@@ -4,7 +4,7 @@ import '../../index.css';
 import Ingresso from '../ingresso/Ingresso';
 import Input from '../../components/input/Input';
 import { DropDiaFestival, DropIngresso } from '../../components/dropIngresso/DropIngresso';
-//import { ValidaCpf } from '../../components/validacao/ValidaCpf';
+import { ValidaCpf } from '../../components/validacao/ValidaCpf';
 import { ShowAge } from '../../components/validacao/ValidaIdade';
 
 const Forms = () => {
@@ -15,7 +15,7 @@ const Forms = () => {
     const [setor, setSetor] = useState('');
     const [dtNasc, setDtNasc] = useState('');
     const [diaFestival, setDiaFestival] = useState('');
-    //const [erroCPF, setErroCPF] = useState('');
+    const [erroCPF, setErroCPF] = useState('');
     const [erroIdade, setErroIdade] = useState('');
     const [mensagem, setMensagem] = useState('');
     const [enviado, setEnviado] = useState(false);
@@ -23,20 +23,20 @@ const Forms = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        /** 
+        
         if (!ValidaCpf(cpf)) {
             setErroCPF('CPF inválido');
             return;
         } else {
             setErroCPF('');
         }
-        */
+        
 
         ShowAge(dtNasc, setErroIdade);
 
         try {
-            const responsePessoa = await fetch('https://api-codechella.azurewebsites.net/api/pessoa', {
-            //const responsePessoa = await fetch('http://localhost:8050/api/pessoa', {
+            //const responsePessoa = await fetch('https://api-codechella.azurewebsites.net/api/pessoa', {
+            const responsePessoa = await fetch('http://localhost:8050/api/pessoa', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -54,8 +54,8 @@ const Forms = () => {
                 console.log(pessoaData);
                 const id = pessoaData.id;
 
-                const responseIngresso = await fetch('https://api-codechella.azurewebsites.net/api/ingresso', {
-                //const responseIngresso = await fetch('http://localhost:8050/api/ingresso', {
+                //const responseIngresso = await fetch('https://api-codechella.azurewebsites.net/api/ingresso', {
+                const responseIngresso = await fetch('http://localhost:8050/api/ingresso', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -121,7 +121,7 @@ const Forms = () => {
                     <div>
                         <label>CPF:</label>
                         <Input tipo={"text"} value={cpf} setValue={setCpf} />
-                        {/**{erroCPF && <p>{erroCPF}</p>} */}
+                        {erroCPF && <p>{erroCPF}</p>}
                     </div>
 
                     <div>
