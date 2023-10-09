@@ -33,8 +33,8 @@ const Forms = () => {
         ShowAge(dtNasc, setErroIdade);
 
         try {
-            //const response = await fetch('https://api-codechella.azurewebsites.net/api/pessoa', {
-            const responsePessoa = await fetch('http://localhost:8050/api/pessoa', {
+            const response = await fetch('https://api-codechella.azurewebsites.net/api/pessoa', {
+            //const responsePessoa = await fetch('http://localhost:8050/api/pessoa', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -52,8 +52,8 @@ const Forms = () => {
                 console.log(pessoaData);
                 const id = pessoaData.id;
 
-                //const response = await fetch('https://api-codechella.azurewebsites.net/api/ingresso', {
-                const responseIngresso = await fetch('http://localhost:8050/api/ingresso', {
+                const response = await fetch('https://api-codechella.azurewebsites.net/api/ingresso', {
+                //const responseIngresso = await fetch('http://localhost:8050/api/ingresso', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
