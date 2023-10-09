@@ -4,7 +4,7 @@ import '../../index.css';
 import Ingresso from '../ingresso/Ingresso';
 import Input from '../../components/input/Input';
 import { DropDiaFestival, DropIngresso } from '../../components/dropIngresso/DropIngresso';
-import { ValidaCpf } from '../../components/validacao/ValidaCpf';
+//import { ValidaCpf } from '../../components/validacao/ValidaCpf';
 import { ShowAge } from '../../components/validacao/ValidaIdade';
 
 const Forms = () => {
@@ -15,7 +15,7 @@ const Forms = () => {
     const [setor, setSetor] = useState('');
     const [dtNasc, setDtNasc] = useState('');
     const [diaFestival, setDiaFestival] = useState('');
-    const [erroCPF, setErroCPF] = useState('');
+    //const [erroCPF, setErroCPF] = useState('');
     const [erroIdade, setErroIdade] = useState('');
     const [mensagem, setMensagem] = useState('');
     const [enviado, setEnviado] = useState(false);
@@ -121,7 +121,7 @@ const Forms = () => {
                     <div>
                         <label>CPF:</label>
                         <Input tipo={"text"} value={cpf} setValue={setCpf} />
-                        {erroCPF && <p>{erroCPF}</p>}
+                        {/**{erroCPF && <p>{erroCPF}</p>} */}
                     </div>
 
                     <div>
