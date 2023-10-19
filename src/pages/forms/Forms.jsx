@@ -4,8 +4,7 @@ import '../../index.css';
 import Ingresso from '../ingresso/Ingresso';
 import Input from '../../components/input/Input';
 import { DropDiaFestival, DropIngresso } from '../../components/dropIngresso/DropIngresso';
-import { ValidaCpf } from '../../components/validacao/ValidaCpf';
-import { ShowAge } from '../../components/validacao/ValidaIdade';
+import { apiPessoa, apiIngresso } from '../../actions/ConnectApi';
 
 const Forms = () => {
 
@@ -15,74 +14,53 @@ const Forms = () => {
     const [setor, setSetor] = useState('');
     const [dtNasc, setDtNasc] = useState('');
     const [diaFestival, setDiaFestival] = useState('');
-    const [erroCPF, setErroCPF] = useState('');
-    const [erroIdade, setErroIdade] = useState('');
     const [mensagem, setMensagem] = useState('');
     const [enviado, setEnviado] = useState(false);
+    const [user, setUser] = useState()
+    const [ingresso, setIngresso] = useState()
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        if (!ValidaCpf(cpf)) {
-            setErroCPF('CPF inválido');
-            return;
-        } else {
-            setErroCPF('');
+        try {
+            apiPessoa
+                .post("http://localhost:8050/api/pessoa", {
+                    nome: user.nome,
+                    email: user.email,
+                    cpf: user.cpf,
+                    dtNasc: user.dtNasc
+                })
+                .then((response)=>{setUser(response.data)})
+                .catch((err)=>{
+                    console.log(`Erro ao fazer conexão ${err}`);
+                    setMensagem('Erro ao fazer conexão')
+                })
+            
+        } catch (error) {
+            setMensagem('Erro ao enviar os dados pessoais. Tente novamente.');
         }
 
-        ShowAge(dtNasc, setErroIdade);
-
         try {
-            //const response = await fetch('https://api-codechella.azurewebsites.net/api/pessoa', {
-            const responsePessoa = await fetch('http://localhost:8050/api/pessoa', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    nome,
-                    email,
-                    cpf,
-                    dtNasc,
-                }),
-            });
-
-            if (responsePessoa.ok) {
-                const pessoaData = await responsePessoa.json();
-                console.log(pessoaData);
-                const id = pessoaData.id;
-
-                //const response = await fetch('https://api-codechella.azurewebsites.net/api/ingresso', {
-                const responseIngresso = await fetch('http://localhost:8050/api/ingresso', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        diaFestival,
-                        setor,
-                        pessoa: {
-                            id: id,
-                        }
-                    }),
+            apiIngresso
+                .post("http://localhost:8050/api/ingresso", {
+                    diaFestival: ingresso.diaFestival,
+                    setor: ingresso.setor,
+                    pessoa: {
+                        id: user.id
+                    }
                 })
-
-                if (responseIngresso.ok) {
-                    const ingressoData = await responseIngresso.json();
-                    console.log('Ingresso criado:', ingressoData);
-                } else {
-                    console.error('Erro ao criar o ingresso:', responseIngresso.status);
-                }
-
-                if (responsePessoa.ok && responseIngresso.ok) {
-                    setMensagem('Dados enviados com sucesso!');
-                    setEnviado(true);
-                } else {
-                    setMensagem('Erro ao enviar os dados. Tente novamente.');
-                }
-            }
+                .then((response)=>{setIngresso(response.data)})
+                .catch((err)=>{
+                    console.log(`Erro ao fazer conexão ${err}`);
+                    setMensagem('Erro ao fazer conexão')
+                })
+            
         } catch (error) {
-            setMensagem('Erro ao enviar os dados. Tente novamente.');
+            setMensagem('Erro ao enviar os dados do ingresso. Tente novamente.');
+        }
+
+        if(apiPessoa && apiIngresso){
+            setEnviado(true)
         }
 
     };
@@ -119,14 +97,12 @@ const Forms = () => {
                     <div>
                         <label>CPF:</label>
                         <Input tipo={"text"} value={cpf} setValue={setCpf} />
-                        {erroCPF && <p>{erroCPF}</p>}
                     </div>
 
                     <div>
                         <label>Data de Nascimento:</label>
                         <Input tipo={"date"} value={dtNasc} setValue={setDtNasc} />
 
-                        {erroIdade && <p>{erroIdade}</p>}
                     </div>
 
                     <fieldset>

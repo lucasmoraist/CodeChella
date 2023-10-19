@@ -1,9 +1,9 @@
 import React from "react";
 
-const Input = ({tipo, value, setValue}) => {
+const Input = ({tipo}) => {
     return(
         <div>
-            <input type={tipo} value={value} onChange={(e) => {setValue(e.target.value)}} required/>
+            <input type={tipo} required/>
         </div>
     )
 }
