@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/CodeChella/static/css/main.8fe5389e.css",
+    "main.js": "/CodeChella/static/js/main.a24fd1d7.js",
+    "static/media/Banner.png": "/CodeChella/static/media/Banner.7b6cc629a16db6dbc9bd.png",
+    "static/media/3-Banner-Mapa-de-setores.png": "/CodeChella/static/media/3-Banner-Mapa-de-setores.8c2e62548c2b9f97c4ab.png",
+    "static/media/1 - Imagem homepage2.png": "/CodeChella/static/media/1 - Imagem homepage2.bb2fae183f628da76b42.png",
+    "static/media/6 - Banner - seu ingresso está aqui.png": "/CodeChella/static/media/6 - Banner - seu ingresso está aqui.e34a163b6137414aba59.png",
+    "static/media/5-Banner-garanta-seu-ingresso.png": "/CodeChella/static/media/5-Banner-garanta-seu-ingresso.6364d6f9b0e6b0f1a1ec.png",
+    "static/media/4-Banner-infos-gerais.png": "/CodeChella/static/media/4-Banner-infos-gerais.c07cbecd876b7495dc0b.png",
+    "static/media/2 - A Experiência3.png": "/CodeChella/static/media/2 - A Experiência3.20d01fd67f8c033e5cc7.png",
+    "static/media/2-Banner-A-Experiência.png": "/CodeChella/static/media/2-Banner-A-Experiência.bee81510bf149ad7e49f.png",
+    "static/media/1 -Imagem homepage1.png": "/CodeChella/static/media/1 -Imagem homepage1.d6d970d1ce3695d67ba2.png",
+    "static/media/2 - A experiência1.png": "/CodeChella/static/media/2 - A experiência1.8152c60cbc8640a96e10.png",
+    "static/media/2 - A Experiência2.png": "/CodeChella/static/media/2 - A Experiência2.9b474a7f25e19d5a86e9.png",
+    "static/media/3 - Mapa de setores2.png": "/CodeChella/static/media/3 - Mapa de setores2.a9fe8dc6e9bf84499460.png",
+    "static/media/3 - Mapa de setores4.png": "/CodeChella/static/media/3 - Mapa de setores4.c4d185d34e1769d7f80f.png",
+    "static/media/3 - Mapa de setores3.png": "/CodeChella/static/media/3 - Mapa de setores3.494fe2d0d97f851e9694.png",
+    "static/media/3 - Mapa setores1.png": "/CodeChella/static/media/3 - Mapa setores1.0aa0a6a1bff2991f839e.png",
+    "index.html": "/CodeChella/index.html",
+    "static/media/arrow_drop_down@2x.svg": "/CodeChella/static/media/arrow_drop_down@2x.91724c64148de7114cd596270c083a8a.svg",
+    "main.8fe5389e.css.map": "/CodeChella/static/css/main.8fe5389e.css.map",
+    "main.a24fd1d7.js.map": "/CodeChella/static/js/main.a24fd1d7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8fe5389e.css",
+    "static/js/main.a24fd1d7.js"
+  ]
+}
