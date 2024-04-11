@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/CodeChella/static/css/main.8fe5389e.css",
-    "main.js": "/CodeChella/static/js/main.a24fd1d7.js",
+    "main.js": "/CodeChella/static/js/main.10605cf7.js",
     "static/media/Banner.png": "/CodeChella/static/media/Banner.7b6cc629a16db6dbc9bd.png",
     "static/media/3-Banner-Mapa-de-setores.png": "/CodeChella/static/media/3-Banner-Mapa-de-setores.8c2e62548c2b9f97c4ab.png",
     "static/media/1 - Imagem homepage2.png": "/CodeChella/static/media/1 - Imagem homepage2.bb2fae183f628da76b42.png",
@@ -20,10 +20,10 @@
     "index.html": "/CodeChella/index.html",
     "static/media/arrow_drop_down@2x.svg": "/CodeChella/static/media/arrow_drop_down@2x.91724c64148de7114cd596270c083a8a.svg",
     "main.8fe5389e.css.map": "/CodeChella/static/css/main.8fe5389e.css.map",
-    "main.a24fd1d7.js.map": "/CodeChella/static/js/main.a24fd1d7.js.map"
+    "main.10605cf7.js.map": "/CodeChella/static/js/main.10605cf7.js.map"
   },
   "entrypoints": [
     "static/css/main.8fe5389e.css",
-    "static/js/main.a24fd1d7.js"
+    "static/js/main.10605cf7.js"
   ]
 }
