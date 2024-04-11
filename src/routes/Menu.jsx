@@ -13,7 +13,7 @@ export default function Menu() {
 
     return (
         <DivNav>
-            <Link to="/"><img src={LogoBranco} alt="" /></Link>
+            <Link to="/CodeChella/"><img src={LogoBranco} alt="" /></Link>
 
             <FaBars onClick={showSideBar} />
             {sideBar && <Sidebar active={setSideBar}/>}
