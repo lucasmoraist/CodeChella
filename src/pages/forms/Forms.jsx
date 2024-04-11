@@ -5,7 +5,6 @@ import Ingresso from '../ingresso/Ingresso';
 import Input from '../../components/input/Input';
 import { DropDiaFestival, DropIngresso } from '../../components/dropIngresso/DropIngresso';
 import { ValidaCpf } from '../../components/validacao/ValidaCpf';
-import { ShowAge } from '../../components/validacao/ValidaIdade';
 
 const Forms = () => {
 
@@ -28,10 +27,25 @@ const Forms = () => {
         } else {
             setErroCPF('');
         }
-        
-        ShowAge(dtNasc, setErroIdade);
-        
-        setEnviado(true)
+
+        const hoje = new Date();
+        const nascimento = new Date(dtNasc);
+
+        let idade = hoje.getFullYear() - nascimento.getFullYear();
+
+        if (idade < 10) {
+            setErroIdade('Você deve ter mais de 10 anos para entrar no evento');
+            return;
+        } else if (idade > 10 && idade < 16) {
+            setErroIdade('Apenas acompanhado');
+            setTimeout(() => {
+                setEnviado(true)
+            }, 2000);
+
+        } else {
+            setEnviado(true)
+            setErroIdade('')
+        }
     };
 
     if (enviado) {
