@@ -44,6 +44,10 @@
         background: url(./assets/Tema-Verão/Imagens/3-Banner-Mapa-de-setores.png), lightgray 50% / cover no-repeat;
         background-size: 2000px 405px;
     }
+    #ingresso{
+        background: url(./assets/Tema-Verão/Imagens/6\ -\ Banner\ -\ seu\ ingresso\ está\ aqui.png);
+        background-size: 2600px 500px;
+    }
 }
 
 @media screen and (min-width: 1279px) and (max-width: 1440px) {
@@ -67,6 +71,10 @@
     }
     #setores {
         background: url(./assets/Tema-Verão/Imagens/3-Banner-Mapa-de-setores.png), lightgray 50% / cover no-repeat;
+    }
+    #ingresso{
+        background: url(./assets/Tema-Verão/Imagens/6\ -\ Banner\ -\ seu\ ingresso\ está\ aqui.png);
+        background-size: 1500px 500px;
     }
 }
 
@@ -92,6 +100,10 @@
         background: url(./assets/Tema-Verão/Imagens/3-Banner-Mapa-de-setores.png), lightgray 50% / cover no-repeat;
         background-size: 800px 410px;
     }
+    #ingresso{
+        background: url(./assets/Tema-Verão/Imagens/6\ -\ Banner\ -\ seu\ ingresso\ está\ aqui.png);
+        background-size: 900px 500px;
+    }
 }
 
 @media screen and (min-width: 359px) and (max-width: 759px) {
@@ -116,6 +128,10 @@
     #setores {
         background: url(./assets/Tema-Verão/Imagens/3-Banner-Mapa-de-setores.png);
         background-size: 410px 410px; 
+    }
+    #ingresso{
+        background: url(./assets/Tema-Verão/Imagens/6\ -\ Banner\ -\ seu\ ingresso\ está\ aqui.png);
+        background-size: 380px 460px;
     }
 }
 
@@ -174,8 +190,6 @@ h1 {
 }
 #ingresso{
     height: 384px;
-    background: url(./assets/Tema-Verão/Imagens/6\ -\ Banner\ -\ seu\ ingresso\ está\ aqui.png);
-    background-size: 1300px 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;

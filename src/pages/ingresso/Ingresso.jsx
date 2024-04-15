@@ -50,10 +50,63 @@ const DivMain = styled.div`
 
 }
 
+@media screen and (min-width: 1440px) {
+    #ingresso{
+        padding: 23px 417px;
+    }
+    #conteudo{
+        width: 792px;
+    }
+    #titulo{
+        font-size: 32px;
+    }
+    #main{
+        align-items: flex-start;
+    }
+}
+
+@media screen and (min-width: 1279px) and (max-width: 1440px) {
+    #ingresso{
+        padding: 23px 417px;
+    }
+    #conteudo{
+        width: 792px;
+    }
+    #titulo{
+        font-size: 32px;
+    }
+    #main{
+        align-items: flex-start;
+    }
+
+}
+
+@media screen and (min-width: 760px) and (max-width: 1278px) {
+    #conteudo{
+        width: 600px;
+    }
+    #titulo{
+        font-size: 32px;
+    }
+    #main{
+        align-items: flex-start;
+    }
+}
+
+@media screen and (min-width: 359px) and (max-width: 759px){
+    #titulo{
+        width: 320px;
+        font-size: 28px;
+    }
+    #main{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+}
+
 #ingresso{
     display: flex;
     height: 407px;
-    padding: 23px 417px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -70,7 +123,6 @@ const DivMain = styled.div`
 
 #conteudo{
     display: flex;
-    width: 792px;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
@@ -81,9 +133,7 @@ const DivMain = styled.div`
     color: var(--cor-escura);
     text-align: center;
     font-family: var(--raleway-font);
-    font-size: 32px;
     font-style: normal;
-    font-weight: 700;
     line-height: normal;
 }
     #molde {
@@ -108,7 +158,6 @@ const DivMain = styled.div`
 
     #main{
         display: flex;
-        align-items: flex-start;
         gap: 48px;
         align-self: stretch;
     }
